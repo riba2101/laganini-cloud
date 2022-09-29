@@ -7,9 +7,9 @@
     <jmxConfigurator/>
 
     <springProfile name="staging,production">
-        <include resource="com/laganini/cloud/logging/defaults.xml"/>
+        <include resource="org/laganini/cloud/logging/defaults.xml"/>
         <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
-        <include resource="com/laganini/cloud/logging/logback-fluentd-appender.xml"/>
+        <include resource="org/laganini/cloud/logging/logback-fluentd-appender.xml"/>
 
         <root level="INFO">
             <appender-ref ref="ASYNC_FLUENT"/>

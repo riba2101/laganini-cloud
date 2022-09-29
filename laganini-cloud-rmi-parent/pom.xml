@@ -6,7 +6,7 @@
         <groupId>org.laganini.cloud</groupId>
         <artifactId>laganini-cloud-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../laganini-cloud-parent</relativePath>
+        <relativePath>../laganini-cloud-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>org.laganini.cloud.rmi</groupId>
