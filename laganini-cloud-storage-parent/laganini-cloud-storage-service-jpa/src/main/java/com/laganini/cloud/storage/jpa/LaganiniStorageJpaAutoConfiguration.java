@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.jpa;
+package org.laganini.cloud.storage.jpa;
 
-import com.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
-import com.laganini.cloud.storage.jpa.aop.CrudEntityAspect;
-import com.laganini.cloud.storage.jpa.aop.JpaEntityAspect;
-import com.laganini.cloud.storage.support.DateTimeParser;
-import com.laganini.cloud.storage.support.DateTimeService;
+import org.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
+import org.laganini.cloud.storage.jpa.aop.CrudEntityAspect;
+import org.laganini.cloud.storage.jpa.aop.JpaEntityAspect;
+import org.laganini.cloud.storage.support.DateTimeParser;
+import org.laganini.cloud.storage.support.DateTimeService;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

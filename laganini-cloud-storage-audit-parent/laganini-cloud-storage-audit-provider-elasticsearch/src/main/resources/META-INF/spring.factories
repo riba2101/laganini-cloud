@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.laganini.cloud.storage.audit.provider.elasticsearch.LaganiniStorageAuditElasticsearchAutoConfiguration
+org.laganini.cloud.storage.audit.provider.elasticsearch.LaganiniStorageAuditElasticsearchAutoConfiguration

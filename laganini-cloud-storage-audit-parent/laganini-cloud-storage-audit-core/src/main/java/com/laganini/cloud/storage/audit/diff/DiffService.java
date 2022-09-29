@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.diff;
+package org.laganini.cloud.storage.audit.diff;
 
 import java.util.Map;
 

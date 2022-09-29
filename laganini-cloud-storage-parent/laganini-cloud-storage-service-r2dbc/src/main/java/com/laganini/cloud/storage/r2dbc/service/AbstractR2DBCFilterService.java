@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.r2dbc.service;
+package org.laganini.cloud.storage.r2dbc.service;
 
-import com.laganini.cloud.storage.connector.model.Filter;
-import com.laganini.cloud.storage.connector.model.FilteredAndSorted;
-import com.laganini.cloud.storage.repository.FilterRepository;
-import com.laganini.cloud.storage.service.AbstractService;
+import org.laganini.cloud.storage.connector.model.Filter;
+import org.laganini.cloud.storage.connector.model.FilteredAndSorted;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.service.AbstractService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
 import com.querydsl.sql.Configuration;
 import com.querydsl.sql.RelationalPath;
 

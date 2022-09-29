@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.corereactive.support;
+package org.laganini.cloud.storage.r2dbc.querydsl.corereactive.support;
 
 import com.querydsl.core.QueryMetadata;
 import com.querydsl.core.support.ExtendedSubQuery;

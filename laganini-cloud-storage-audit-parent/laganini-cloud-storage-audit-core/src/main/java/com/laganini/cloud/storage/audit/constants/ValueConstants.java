@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.constants;
+package org.laganini.cloud.storage.audit.constants;
 
 public final class ValueConstants {
 

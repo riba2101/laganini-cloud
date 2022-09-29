@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.suite;
+package org.laganini.cloud.storage.suite;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.web.reactive.server.WebTestClient;

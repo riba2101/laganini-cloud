@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.provider.jpa;
+package org.laganini.cloud.storage.audit.provider.jpa;
 
-import com.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
-import com.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
+import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
 import org.springframework.data.repository.CrudRepository;
 
 interface JpaRevisionEntryRepository

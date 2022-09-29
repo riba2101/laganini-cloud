@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.jpa.entity;
+package org.laganini.cloud.storage.jpa.entity;
 
-import com.laganini.cloud.storage.entity.OwnedEntity;
+import org.laganini.cloud.storage.entity.OwnedEntity;
 import lombok.*;
 
 import javax.persistence.Column;

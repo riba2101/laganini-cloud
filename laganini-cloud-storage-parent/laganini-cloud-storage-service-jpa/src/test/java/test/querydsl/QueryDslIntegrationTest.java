@@ -1,6 +1,6 @@
 package test.querydsl;
 
-import com.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.test.suite.IntegrationTest;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import org.assertj.core.api.Assertions;

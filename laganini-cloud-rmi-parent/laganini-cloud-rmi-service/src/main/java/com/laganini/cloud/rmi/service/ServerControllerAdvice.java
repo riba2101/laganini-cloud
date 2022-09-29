@@ -1,11 +1,11 @@
-package com.laganini.cloud.rmi.service;
+package org.laganini.cloud.rmi.service;
 
-import com.laganini.cloud.exception.BusinessException;
-import com.laganini.cloud.exception.BusinessExceptionResponse;
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.exception.detail.AbstractExceptionDetail;
-import com.laganini.cloud.exception.detail.FieldExceptionDetail;
-import com.laganini.cloud.exception.detail.GlobalExceptionDetail;
+import org.laganini.cloud.exception.BusinessException;
+import org.laganini.cloud.exception.BusinessExceptionResponse;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.exception.detail.AbstractExceptionDetail;
+import org.laganini.cloud.exception.detail.FieldExceptionDetail;
+import org.laganini.cloud.exception.detail.GlobalExceptionDetail;
 import io.github.resilience4j.bulkhead.BulkheadFullException;
 import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import lombok.extern.slf4j.Slf4j;

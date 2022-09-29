@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.provider;
+package org.laganini.cloud.storage.audit.provider;
 
-import com.laganini.cloud.test.testcontainer.ElasticsearchContainer;
-import com.laganini.cloud.test.testcontainer.MariaDBContainer;
+import org.laganini.cloud.test.testcontainer.ElasticsearchContainer;
+import org.laganini.cloud.test.testcontainer.MariaDBContainer;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

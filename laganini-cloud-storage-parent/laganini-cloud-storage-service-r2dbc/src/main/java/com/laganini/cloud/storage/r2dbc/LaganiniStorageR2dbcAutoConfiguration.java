@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.r2dbc;
+package org.laganini.cloud.storage.r2dbc;
 
-import com.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
-import com.laganini.cloud.storage.r2dbc.aop.ReactiveEntityAspect;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.mysql.MySqlR2dbcQueryFactory;
+import org.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
+import org.laganini.cloud.storage.r2dbc.aop.ReactiveEntityAspect;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.mysql.MySqlR2dbcQueryFactory;
 import io.r2dbc.spi.ConnectionFactory;
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;

@@ -1,8 +1,8 @@
-package com.laganini.cloud.rmi.client;
+package org.laganini.cloud.rmi.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.laganini.cloud.exception.BusinessException;
-import com.laganini.cloud.exception.BusinessExceptionResponse;
+import org.laganini.cloud.exception.BusinessException;
+import org.laganini.cloud.exception.BusinessExceptionResponse;
 import feign.FeignException;
 import feign.Response;
 import feign.codec.ErrorDecoder;

@@ -1,12 +1,12 @@
-package com.laganini.cloud.rmi.service;
+package org.laganini.cloud.rmi.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.laganini.cloud.exception.BusinessExceptionResponse;
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.exception.detail.FieldExceptionDetail;
-import com.laganini.cloud.exception.detail.code.registry.BeanValidationCode;
-import com.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.exception.BusinessExceptionResponse;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.exception.detail.FieldExceptionDetail;
+import org.laganini.cloud.exception.detail.code.registry.BeanValidationCode;
+import org.laganini.cloud.test.suite.IntegrationTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

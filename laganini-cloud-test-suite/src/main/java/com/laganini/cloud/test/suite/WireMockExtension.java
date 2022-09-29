@@ -1,4 +1,4 @@
-package com.laganini.cloud.test.suite;
+package org.laganini.cloud.test.suite;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.tomakehurst.wiremock.WireMockServer;

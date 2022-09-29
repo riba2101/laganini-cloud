@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.entity;
+package org.laganini.cloud.storage.entity;
 
 public interface IdentityEntity<ID>
         extends TemporalEntity

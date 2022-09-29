@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
 
-import com.laganini.cloud.storage.audit.provider.AbstractReactiveRevisionServiceTest;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.converter.ReactiveElasticsearchRevisionConverter;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.storage.audit.provider.AbstractReactiveRevisionServiceTest;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.converter.ReactiveElasticsearchRevisionConverter;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;

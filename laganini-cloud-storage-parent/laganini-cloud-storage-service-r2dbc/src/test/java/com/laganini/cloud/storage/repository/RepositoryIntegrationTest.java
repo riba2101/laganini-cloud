@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.repository;
+package org.laganini.cloud.storage.repository;
 
-import com.laganini.cloud.test.testcontainer.ElasticsearchContainer;
-import com.laganini.cloud.test.testcontainer.MariaDBContainer;
+import org.laganini.cloud.test.testcontainer.ElasticsearchContainer;
+import org.laganini.cloud.test.testcontainer.MariaDBContainer;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.storage.ModelBuilder;
-import com.laganini.cloud.storage.suite.ReactiveWebIntegrationTestSuite;
+import org.laganini.cloud.storage.ModelBuilder;
+import org.laganini.cloud.storage.suite.ReactiveWebIntegrationTestSuite;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.RecursiveComparisonAssert;
 import org.springframework.context.ApplicationContext;

@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Sets;
-import com.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
-import com.laganini.cloud.storage.r2dbc.querydsl.corereactive.support.FetchableSubQueryBase;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.support.FetchableSubQueryBase;
 import com.querydsl.core.JoinFlag;
 import com.querydsl.core.Query;
 import com.querydsl.core.QueryFlag;

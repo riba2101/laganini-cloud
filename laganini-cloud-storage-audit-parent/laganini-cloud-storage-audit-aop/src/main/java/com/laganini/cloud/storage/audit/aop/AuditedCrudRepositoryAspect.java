@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.aop;
+package org.laganini.cloud.storage.audit.aop;
 
-import com.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;

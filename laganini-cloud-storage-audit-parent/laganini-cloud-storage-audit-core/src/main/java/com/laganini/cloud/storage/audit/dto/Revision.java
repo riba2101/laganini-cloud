@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.dto;
+package org.laganini.cloud.storage.audit.dto;
 
 import lombok.AccessLevel;
 import lombok.Getter;

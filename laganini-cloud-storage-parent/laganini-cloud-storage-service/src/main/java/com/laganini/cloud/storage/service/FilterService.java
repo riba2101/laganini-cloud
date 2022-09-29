@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.service;
+package org.laganini.cloud.storage.service;
 
-import com.laganini.cloud.storage.connector.model.Filter;
-import com.laganini.cloud.storage.connector.model.FilteredAndSorted;
+import org.laganini.cloud.storage.connector.model.Filter;
+import org.laganini.cloud.storage.connector.model.FilteredAndSorted;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

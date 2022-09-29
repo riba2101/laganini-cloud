@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.provider;
+package org.laganini.cloud.storage.audit.provider;
 
-import com.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 

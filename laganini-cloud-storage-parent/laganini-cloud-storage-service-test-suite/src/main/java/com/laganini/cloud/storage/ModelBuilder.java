@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage;
+package org.laganini.cloud.storage;
 
 @FunctionalInterface
 public interface ModelBuilder<MODEL> {

@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
 
-import com.laganini.cloud.storage.audit.converter.RevisionConverter;
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
-import com.laganini.cloud.storage.audit.service.AbstractRevisionReactiveService;
+import org.laganini.cloud.storage.audit.converter.RevisionConverter;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
+import org.laganini.cloud.storage.audit.service.AbstractRevisionReactiveService;
 
 public class ElasticsearchRevisionReactiveService
         extends AbstractRevisionReactiveService<ElasticsearchReactiveRevision>

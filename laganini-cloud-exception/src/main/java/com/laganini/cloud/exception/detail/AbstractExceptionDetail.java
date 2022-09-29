@@ -1,8 +1,8 @@
-package com.laganini.cloud.exception.detail;
+package org.laganini.cloud.exception.detail;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
-import com.laganini.cloud.common.jackson.TypeInfoIdResolver;
+import org.laganini.cloud.common.jackson.TypeInfoIdResolver;
 import lombok.*;
 
 @Getter

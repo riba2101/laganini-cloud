@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.service;
+package org.laganini.cloud.storage.service;
 
-import com.laganini.cloud.exception.BusinessException;
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.exception.detail.AbstractExceptionDetail;
-import com.laganini.cloud.exception.detail.EntityExceptionDetail;
-import com.laganini.cloud.exception.detail.code.registry.EntityCode;
+import org.laganini.cloud.exception.BusinessException;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.exception.detail.AbstractExceptionDetail;
+import org.laganini.cloud.exception.detail.EntityExceptionDetail;
+import org.laganini.cloud.exception.detail.code.registry.EntityCode;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 

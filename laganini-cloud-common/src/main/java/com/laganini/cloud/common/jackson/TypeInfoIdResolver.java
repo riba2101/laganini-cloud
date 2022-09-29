@@ -1,4 +1,4 @@
-package com.laganini.cloud.common.jackson;
+package org.laganini.cloud.common.jackson;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;

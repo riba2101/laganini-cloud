@@ -1,6 +1,6 @@
-package com.laganini.cloud.rmi.client;
+package org.laganini.cloud.rmi.client;
 
-import com.laganini.cloud.exception.BusinessException;
+import org.laganini.cloud.exception.BusinessException;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;

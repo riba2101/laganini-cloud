@@ -1,4 +1,4 @@
-package com.laganini.cloud.rmi.connector.service;
+package org.laganini.cloud.rmi.connector.service;
 
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

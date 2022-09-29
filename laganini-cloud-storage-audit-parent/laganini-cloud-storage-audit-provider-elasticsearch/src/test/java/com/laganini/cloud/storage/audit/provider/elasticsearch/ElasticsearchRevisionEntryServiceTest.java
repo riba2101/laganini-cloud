@@ -1,13 +1,13 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch;
+package org.laganini.cloud.storage.audit.provider.elasticsearch;
 
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.provider.AbstractRevisionEntryServiceTest;
-import com.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
-import com.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevision;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevisionEntry;
-import com.laganini.cloud.storage.audit.service.RevisionEntryService;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.provider.AbstractRevisionEntryServiceTest;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
+import org.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevision;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevisionEntry;
+import org.laganini.cloud.storage.audit.service.RevisionEntryService;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;

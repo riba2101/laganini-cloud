@@ -1,4 +1,4 @@
-package com.laganini.cloud.rmi.service;
+package org.laganini.cloud.rmi.service;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.entity;
+package org.laganini.cloud.storage.audit.entity;
 
 public interface RevisionEntity {
 

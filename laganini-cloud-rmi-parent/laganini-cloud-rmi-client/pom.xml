@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.laganini.cloud.rmi</groupId>
+        <groupId>org.laganini.cloud.rmi</groupId>
         <artifactId>laganini-cloud-rmi-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -99,20 +99,20 @@
         </dependency>
 
         <dependency>
-            <groupId>com.laganini.cloud</groupId>
+            <groupId>org.laganini.cloud</groupId>
             <artifactId>laganini-cloud-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.laganini.cloud.exception</groupId>
+            <groupId>org.laganini.cloud.exception</groupId>
             <artifactId>laganini-cloud-exception</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.laganini.cloud.logging</groupId>
+            <groupId>org.laganini.cloud.logging</groupId>
             <artifactId>laganini-cloud-logging</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.laganini.cloud.test</groupId>
+            <groupId>org.laganini.cloud.test</groupId>
             <artifactId>laganini-cloud-test-suite</artifactId>
             <scope>test</scope>
         </dependency>

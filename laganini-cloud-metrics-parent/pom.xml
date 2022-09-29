@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.laganini.cloud</groupId>
+        <groupId>org.laganini.cloud</groupId>
         <artifactId>laganini-cloud-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../laganini-cloud-parent</relativePath>
     </parent>
 
-    <groupId>com.laganini.cloud.metrics</groupId>
+    <groupId>org.laganini.cloud.metrics</groupId>
     <artifactId>laganini-cloud-metrics-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>

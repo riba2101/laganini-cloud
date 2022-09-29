@@ -1,11 +1,11 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
 
-import com.laganini.cloud.logging.author.AuthorReactiveProvider;
-import com.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
-import com.laganini.cloud.storage.audit.diff.DiffService;
-import com.laganini.cloud.storage.audit.dto.RevisionEntry;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevisionEntry;
-import com.laganini.cloud.storage.audit.service.AbstractRevisionEntryReactiveService;
+import org.laganini.cloud.logging.author.AuthorReactiveProvider;
+import org.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
+import org.laganini.cloud.storage.audit.diff.DiffService;
+import org.laganini.cloud.storage.audit.dto.RevisionEntry;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevisionEntry;
+import org.laganini.cloud.storage.audit.service.AbstractRevisionEntryReactiveService;
 
 import java.time.Clock;
 

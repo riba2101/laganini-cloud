@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcDeleteClause;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcInsertClause;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcUpdateClause;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcDeleteClause;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcInsertClause;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcUpdateClause;
 import com.querydsl.core.QueryFactory;
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Expression;

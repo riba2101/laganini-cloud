@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity;
 
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.postgresql;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.postgresql;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
 import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.dsl.Expressions;

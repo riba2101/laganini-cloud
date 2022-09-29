@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.aop.handler;
+package org.laganini.cloud.storage.aop.handler;
 
 import org.aspectj.lang.JoinPoint;
 import org.springframework.data.repository.core.RepositoryMetadata;

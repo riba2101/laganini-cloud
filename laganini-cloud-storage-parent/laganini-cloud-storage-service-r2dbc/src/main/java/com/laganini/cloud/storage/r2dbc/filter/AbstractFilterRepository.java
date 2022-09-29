@@ -1,11 +1,11 @@
-package com.laganini.cloud.storage.r2dbc.filter;
+package org.laganini.cloud.storage.r2dbc.filter;
 
-import com.laganini.cloud.storage.connector.model.Operator;
-import com.laganini.cloud.storage.connector.model.*;
-import com.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
-import com.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
-import com.laganini.cloud.storage.repository.FilterRepository;
-import com.laganini.cloud.storage.support.DateTimeService;
+import org.laganini.cloud.storage.connector.model.Operator;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.support.DateTimeService;
 import com.querydsl.core.types.*;
 import com.querydsl.core.types.dsl.NumberExpression;
 import com.querydsl.core.types.dsl.StringExpression;
@@ -130,7 +130,7 @@ public abstract class AbstractFilterRepository<ENTITY>
     private void buildWhere(
             FetchableR2dbcQuery<ENTITY, ? extends FetchableR2dbcQuery<ENTITY, ?>> query,
             AbstractSearchCriteriaMapper.Field<?> fieldMapping,
-            com.laganini.cloud.storage.connector.model.Operator operator,
+            org.laganini.cloud.storage.connector.model.Operator operator,
             Object value
     )
     {
@@ -141,20 +141,20 @@ public abstract class AbstractFilterRepository<ENTITY>
     @SuppressWarnings("unchecked")
     private <T> Predicate determinePredicate(
             AbstractSearchCriteriaMapper.Field<T> fieldMapping,
-            com.laganini.cloud.storage.connector.model.Operator operator,
+            org.laganini.cloud.storage.connector.model.Operator operator,
             Object value
     )
     {
         Expression<T> path = fieldMapping.getField();
 
         if (value == null) {
-            return operator == com.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.isNotNull(
+            return operator == org.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.isNotNull(
                     path) : ExpressionUtils.isNull(path);
         }
 
         if (value.getClass().isArray()) {
             Set<T> casted = convert(fieldMapping.getConverter(), path, Arrays.asList((T[]) value));
-            return operator == com.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.notIn(
+            return operator == org.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.notIn(
                     path,
                     casted
             ) : ExpressionUtils.in(
@@ -165,7 +165,7 @@ public abstract class AbstractFilterRepository<ENTITY>
 
         if (value instanceof Iterable) {
             Set<T> casted = convert(fieldMapping.getConverter(), path, (Iterable<T>) value);
-            return operator == com.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.notIn(
+            return operator == org.laganini.cloud.storage.connector.model.Operator.NOT_EQUALS ? ExpressionUtils.notIn(
                     path,
                     casted
             ) : ExpressionUtils.in(

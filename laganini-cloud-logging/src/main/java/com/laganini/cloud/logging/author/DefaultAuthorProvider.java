@@ -1,7 +1,7 @@
-package com.laganini.cloud.logging.author;
+package org.laganini.cloud.logging.author;
 
 import brave.baggage.BaggageField;
-import com.laganini.cloud.common.SpanConstants;
+import org.laganini.cloud.common.SpanConstants;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

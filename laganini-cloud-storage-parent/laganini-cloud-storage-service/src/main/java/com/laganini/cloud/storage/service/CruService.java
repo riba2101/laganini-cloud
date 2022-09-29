@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.service;
+package org.laganini.cloud.storage.service;
 
-import com.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

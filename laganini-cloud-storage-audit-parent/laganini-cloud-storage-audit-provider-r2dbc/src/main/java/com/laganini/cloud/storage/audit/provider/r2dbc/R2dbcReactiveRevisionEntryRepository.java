@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc;
+package org.laganini.cloud.storage.audit.provider.r2dbc;
 
-import com.laganini.cloud.storage.audit.provider.RevisionEntryReactiveRepository;
-import com.laganini.cloud.storage.audit.provider.r2dbc.entity.R2dbcRevisionEntry;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryReactiveRepository;
+import org.laganini.cloud.storage.audit.provider.r2dbc.entity.R2dbcRevisionEntry;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import com.querydsl.core.types.*;
 import com.querydsl.sql.SQLOps;

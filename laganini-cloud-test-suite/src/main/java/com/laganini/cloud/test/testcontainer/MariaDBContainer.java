@@ -1,4 +1,4 @@
-package com.laganini.cloud.test.testcontainer;
+package org.laganini.cloud.test.testcontainer;
 
 import lombok.NonNull;
 import org.testcontainers.containers.wait.strategy.Wait;

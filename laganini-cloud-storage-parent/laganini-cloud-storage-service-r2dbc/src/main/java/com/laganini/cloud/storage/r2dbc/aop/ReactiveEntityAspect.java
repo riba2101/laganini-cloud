@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.r2dbc.aop;
+package org.laganini.cloud.storage.r2dbc.aop;
 
-import com.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
+import org.laganini.cloud.storage.aop.handler.EntityJoinPointHandler;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

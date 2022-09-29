@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.corereactive;
+package org.laganini.cloud.storage.r2dbc.querydsl.corereactive;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
 import com.querydsl.core.Query;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;

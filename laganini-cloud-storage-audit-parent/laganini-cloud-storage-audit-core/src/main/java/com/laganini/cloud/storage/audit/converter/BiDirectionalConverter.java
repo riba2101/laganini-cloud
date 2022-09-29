@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.converter;
+package org.laganini.cloud.storage.audit.converter;
 
 public interface BiDirectionalConverter<S, T> {
 

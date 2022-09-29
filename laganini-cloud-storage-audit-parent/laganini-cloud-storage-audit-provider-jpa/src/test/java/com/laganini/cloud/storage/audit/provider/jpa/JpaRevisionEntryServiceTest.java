@@ -1,14 +1,14 @@
-package com.laganini.cloud.storage.audit.provider.jpa;
+package org.laganini.cloud.storage.audit.provider.jpa;
 
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.provider.AbstractRevisionEntryServiceTest;
-import com.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
-import com.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
-import com.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
-import com.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
-import com.laganini.cloud.storage.audit.service.RevisionEntryService;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
-import com.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.provider.AbstractRevisionEntryServiceTest;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
+import org.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
+import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
+import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
+import org.laganini.cloud.storage.audit.service.RevisionEntryService;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.test.suite.IntegrationTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 

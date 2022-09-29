@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.jpa;
+package org.laganini.cloud.storage.jpa;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

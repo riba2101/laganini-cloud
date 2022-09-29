@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.repository;
+package org.laganini.cloud.storage.repository;
 
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 

@@ -1,4 +1,4 @@
-package com.laganini.cloud.exception;
+package org.laganini.cloud.exception;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc;
+package org.laganini.cloud.storage.r2dbc;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;

@@ -1,6 +1,6 @@
-package com.laganini.cloud.exception;
+package org.laganini.cloud.exception;
 
-import com.laganini.cloud.exception.detail.AbstractExceptionDetail;
+import org.laganini.cloud.exception.detail.AbstractExceptionDetail;
 import lombok.Getter;
 import lombok.ToString;
 

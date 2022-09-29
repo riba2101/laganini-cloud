@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc;
+package org.laganini.cloud.storage.audit.provider.r2dbc;
 
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Inherited
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@EnableR2dbcRepositories(basePackages = "com.laganini.cloud.storage.audit.provider.r2dbc")
+@EnableR2dbcRepositories(basePackages = "org.laganini.cloud.storage.audit.provider.r2dbc")
 public @interface EnableLaganiniCloudStorageAuditR2dbc {
 
     @AliasFor(annotation = EnableR2dbcRepositories.class, attribute = "entityOperationsRef")

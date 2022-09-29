@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.corereactive.dml;
+package org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dml;
 
 import reactor.core.publisher.Mono;
 

@@ -1,14 +1,14 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch;
+package org.laganini.cloud.storage.audit.provider.elasticsearch;
 
-import com.laganini.cloud.logging.author.AuthorProvider;
-import com.laganini.cloud.storage.audit.aop.AuditedCrudRepositoryAspect;
-import com.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
-import com.laganini.cloud.storage.audit.configuration.AbstractLaganiniStorageAuditConfiguration;
-import com.laganini.cloud.storage.audit.diff.DiffService;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionConverter;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionEntryConverter;
-import com.laganini.cloud.storage.audit.service.RevisionEntryService;
-import com.laganini.cloud.storage.audit.service.RevisionService;
+import org.laganini.cloud.logging.author.AuthorProvider;
+import org.laganini.cloud.storage.audit.aop.AuditedCrudRepositoryAspect;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
+import org.laganini.cloud.storage.audit.configuration.AbstractLaganiniStorageAuditConfiguration;
+import org.laganini.cloud.storage.audit.diff.DiffService;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionConverter;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionEntryConverter;
+import org.laganini.cloud.storage.audit.service.RevisionEntryService;
+import org.laganini.cloud.storage.audit.service.RevisionService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

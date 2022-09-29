@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.provider.jpa;
+package org.laganini.cloud.storage.audit.provider.jpa;
 
-import com.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
+import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.BeanNameGenerator;
 import org.springframework.boot.autoconfigure.domain.EntityScanPackages;

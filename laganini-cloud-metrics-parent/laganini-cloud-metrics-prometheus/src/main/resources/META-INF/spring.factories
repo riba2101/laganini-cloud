@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.laganini.cloud.metric.LaganiniPrometheusAutoConfiguration
+org.laganini.cloud.metric.LaganiniPrometheusAutoConfiguration

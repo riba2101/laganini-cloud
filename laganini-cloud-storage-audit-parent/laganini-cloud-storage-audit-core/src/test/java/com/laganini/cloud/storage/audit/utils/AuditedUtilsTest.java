@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.utils;
+package org.laganini.cloud.storage.audit.utils;
 
-import com.laganini.cloud.storage.audit.annotation.Audited;
+import org.laganini.cloud.storage.audit.annotation.Audited;
 import lombok.Getter;
 import lombok.Setter;
 import org.assertj.core.api.Assertions;

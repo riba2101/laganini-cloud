@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.exception.BusinessException;
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.exception.detail.AbstractExceptionDetail;
+import org.laganini.cloud.exception.BusinessException;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.exception.detail.AbstractExceptionDetail;
 import org.springframework.core.convert.converter.Converter;
 
 import java.util.Arrays;

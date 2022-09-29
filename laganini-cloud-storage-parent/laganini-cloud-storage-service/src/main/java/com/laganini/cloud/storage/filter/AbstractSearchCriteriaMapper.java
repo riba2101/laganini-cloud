@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.filter;
+package org.laganini.cloud.storage.filter;
 
-import com.laganini.cloud.storage.connector.model.FilterCriteria;
-import com.laganini.cloud.storage.connector.model.SortCriteria;
+import org.laganini.cloud.storage.connector.model.FilterCriteria;
+import org.laganini.cloud.storage.connector.model.SortCriteria;
 import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.Predicate;
 import lombok.Value;

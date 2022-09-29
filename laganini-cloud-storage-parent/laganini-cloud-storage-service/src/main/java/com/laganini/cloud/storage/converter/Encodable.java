@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.converter;
+package org.laganini.cloud.storage.converter;
 
-import com.laganini.cloud.common.DynamicEnum;
+import org.laganini.cloud.common.DynamicEnum;
 import org.springframework.util.ReflectionUtils;
 
 import java.util.Arrays;

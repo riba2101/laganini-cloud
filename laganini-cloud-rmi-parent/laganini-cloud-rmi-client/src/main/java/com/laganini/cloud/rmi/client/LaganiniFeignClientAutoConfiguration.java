@@ -1,4 +1,4 @@
-package com.laganini.cloud.rmi.client;
+package org.laganini.cloud.rmi.client;
 
 import feign.Logger;
 import feign.codec.ErrorDecoder;

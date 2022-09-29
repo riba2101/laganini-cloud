@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.mysql;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.mysql;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcInsertClause;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml.R2dbcInsertClause;
 import com.querydsl.core.QueryFlag;
 import com.querydsl.sql.Configuration;
 import com.querydsl.sql.RelationalPath;

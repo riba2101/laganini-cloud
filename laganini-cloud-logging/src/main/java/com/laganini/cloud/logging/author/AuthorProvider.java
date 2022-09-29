@@ -1,4 +1,4 @@
-package com.laganini.cloud.logging.author;
+package org.laganini.cloud.logging.author;
 
 @FunctionalInterface
 public interface AuthorProvider {

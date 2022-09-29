@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.connector.model;
+package org.laganini.cloud.storage.connector.model;
 
-import com.laganini.cloud.validation.group.Create;
-import com.laganini.cloud.validation.group.Default;
-import com.laganini.cloud.validation.group.Update;
+import org.laganini.cloud.validation.group.Create;
+import org.laganini.cloud.validation.group.Default;
+import org.laganini.cloud.validation.group.Update;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;

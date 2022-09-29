@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.laganini.cloud.metrics</groupId>
+        <groupId>org.laganini.cloud.metrics</groupId>
         <artifactId>laganini-cloud-metrics-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>

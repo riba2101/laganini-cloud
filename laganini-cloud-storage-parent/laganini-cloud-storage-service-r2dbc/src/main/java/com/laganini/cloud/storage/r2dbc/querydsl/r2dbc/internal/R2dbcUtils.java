@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.internal;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.internal;
 
 public class R2dbcUtils {
 

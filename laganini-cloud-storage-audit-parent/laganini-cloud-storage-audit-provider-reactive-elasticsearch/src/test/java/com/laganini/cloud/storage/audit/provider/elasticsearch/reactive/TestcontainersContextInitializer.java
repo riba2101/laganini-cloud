@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
 
-import com.laganini.cloud.test.testcontainer.ElasticsearchContainer;
+import org.laganini.cloud.test.testcontainer.ElasticsearchContainer;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

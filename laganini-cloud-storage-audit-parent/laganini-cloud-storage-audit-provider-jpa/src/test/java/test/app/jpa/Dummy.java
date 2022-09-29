@@ -1,7 +1,7 @@
 package test.app.jpa;
 
-import com.laganini.cloud.storage.audit.annotation.Audited;
-import com.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.audit.annotation.Audited;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

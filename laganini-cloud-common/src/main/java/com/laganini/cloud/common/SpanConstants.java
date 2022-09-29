@@ -1,4 +1,4 @@
-package com.laganini.cloud.common;
+package org.laganini.cloud.common;
 
 public final class SpanConstants {
 

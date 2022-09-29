@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc.converter;
+package org.laganini.cloud.storage.audit.provider.r2dbc.converter;
 
-import com.laganini.cloud.storage.audit.converter.RevisionConverter;
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.provider.r2dbc.entity.R2dbcRevision;
+import org.laganini.cloud.storage.audit.converter.RevisionConverter;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.provider.r2dbc.entity.R2dbcRevision;
 
 public class R2dbcRevisionConverter implements RevisionConverter<Revision, R2dbcRevision> {
 

@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import com.google.common.collect.Lists;
-import com.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
 import com.querydsl.core.DefaultQueryMetadata;
 import com.querydsl.core.QueryException;
 import com.querydsl.core.QueryFlag;

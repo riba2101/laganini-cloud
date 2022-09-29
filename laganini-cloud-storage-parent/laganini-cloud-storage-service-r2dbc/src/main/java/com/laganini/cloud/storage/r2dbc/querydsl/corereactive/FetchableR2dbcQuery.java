@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.corereactive;
+package org.laganini.cloud.storage.r2dbc.querydsl.corereactive;
 
 import com.querydsl.core.ResultTransformer;
 import com.querydsl.core.SimpleQuery;

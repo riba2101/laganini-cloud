@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.converter;
+package org.laganini.cloud.storage.converter;
 
 public abstract class AbstractEnumConverter<E extends Enum<E> & Encodable<ID>, ID> {
 

@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.repository;
+package org.laganini.cloud.storage.repository;
 
-import com.laganini.cloud.storage.r2dbc.entity.AbstractIdEntity;
+import org.laganini.cloud.storage.r2dbc.entity.AbstractIdEntity;
 import com.querydsl.core.annotations.QueryEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

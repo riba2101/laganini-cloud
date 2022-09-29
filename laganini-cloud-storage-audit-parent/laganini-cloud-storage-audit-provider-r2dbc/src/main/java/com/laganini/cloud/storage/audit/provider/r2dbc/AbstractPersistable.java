@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc;
+package org.laganini.cloud.storage.audit.provider.r2dbc;
 
 import org.springframework.data.annotation.Transient;
 import org.springframework.data.domain.Persistable;

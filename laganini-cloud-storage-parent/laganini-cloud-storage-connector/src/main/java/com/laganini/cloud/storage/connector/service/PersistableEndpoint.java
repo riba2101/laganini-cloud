@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.connector.service;
+package org.laganini.cloud.storage.connector.service;
 
-import com.laganini.cloud.storage.connector.model.Fetchable;
-import com.laganini.cloud.validation.group.Create;
-import com.laganini.cloud.validation.group.Update;
+import org.laganini.cloud.storage.connector.model.Fetchable;
+import org.laganini.cloud.validation.group.Create;
+import org.laganini.cloud.validation.group.Update;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

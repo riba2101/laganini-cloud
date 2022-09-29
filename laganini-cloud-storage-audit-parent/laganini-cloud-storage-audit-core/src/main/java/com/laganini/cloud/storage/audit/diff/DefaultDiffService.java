@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.diff;
+package org.laganini.cloud.storage.audit.diff;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

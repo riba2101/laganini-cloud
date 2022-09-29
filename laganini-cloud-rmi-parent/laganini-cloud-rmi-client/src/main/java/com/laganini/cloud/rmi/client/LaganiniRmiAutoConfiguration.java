@@ -1,4 +1,4 @@
-package com.laganini.cloud.rmi.client;
+package org.laganini.cloud.rmi.client;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;

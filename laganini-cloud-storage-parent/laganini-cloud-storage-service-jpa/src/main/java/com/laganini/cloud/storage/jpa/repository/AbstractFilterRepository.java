@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.jpa.repository;
+package org.laganini.cloud.storage.jpa.repository;
 
-import com.laganini.cloud.storage.connector.model.Operator;
-import com.laganini.cloud.storage.connector.model.*;
-import com.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
-import com.laganini.cloud.storage.repository.FilterRepository;
-import com.laganini.cloud.storage.support.DateTimeService;
+import org.laganini.cloud.storage.connector.model.Operator;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.support.DateTimeService;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.types.*;
 import com.querydsl.core.types.dsl.Expressions;

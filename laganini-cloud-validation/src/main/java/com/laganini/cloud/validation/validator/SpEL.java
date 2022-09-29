@@ -1,4 +1,4 @@
-package com.laganini.cloud.validation.validator;
+package org.laganini.cloud.validation.validator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

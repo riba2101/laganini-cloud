@@ -1,4 +1,4 @@
-package com.laganini.cloud.metric;
+package org.laganini.cloud.metric;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;

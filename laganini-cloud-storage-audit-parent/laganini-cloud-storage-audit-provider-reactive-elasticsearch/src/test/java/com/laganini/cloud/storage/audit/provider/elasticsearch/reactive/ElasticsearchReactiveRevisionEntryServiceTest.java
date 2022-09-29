@@ -1,14 +1,14 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive;
 
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.provider.AbstractReactiveRevisionEntryServiceTest;
-import com.laganini.cloud.storage.audit.provider.RevisionEntryReactiveRepository;
-import com.laganini.cloud.storage.audit.provider.RevisionReactiveRepository;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevisionEntry;
-import com.laganini.cloud.storage.audit.service.RevisionEntryReactiveService;
-import com.laganini.cloud.storage.audit.service.RevisionReactiveService;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.provider.AbstractReactiveRevisionEntryServiceTest;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryReactiveRepository;
+import org.laganini.cloud.storage.audit.provider.RevisionReactiveRepository;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevision;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.ElasticsearchReactiveRevisionEntry;
+import org.laganini.cloud.storage.audit.service.RevisionEntryReactiveService;
+import org.laganini.cloud.storage.audit.service.RevisionReactiveService;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;

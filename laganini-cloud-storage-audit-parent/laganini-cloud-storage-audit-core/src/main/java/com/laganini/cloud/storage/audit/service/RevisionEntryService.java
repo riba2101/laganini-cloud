@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.audit.service;
+package org.laganini.cloud.storage.audit.service;
 
 
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.dto.RevisionEntry;
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.dto.RevisionEntry;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
 
 import java.util.Collection;
 import java.util.Optional;

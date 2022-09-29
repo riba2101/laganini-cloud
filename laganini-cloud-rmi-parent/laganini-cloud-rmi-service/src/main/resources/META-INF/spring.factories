@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.laganini.cloud.rmi.service.LaganiniFeignServerAutoConfiguration
+org.laganini.cloud.rmi.service.LaganiniFeignServerAutoConfiguration

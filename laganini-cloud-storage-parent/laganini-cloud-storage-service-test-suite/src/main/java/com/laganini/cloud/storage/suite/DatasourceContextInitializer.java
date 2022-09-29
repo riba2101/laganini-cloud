@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.suite;
+package org.laganini.cloud.storage.suite;
 
-import com.laganini.cloud.test.testcontainer.MariaDBContainer;
+import org.laganini.cloud.test.testcontainer.MariaDBContainer;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;

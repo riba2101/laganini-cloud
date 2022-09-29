@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.support;
+package org.laganini.cloud.storage.support;
 
 import java.time.Clock;
 import java.time.LocalDateTime;

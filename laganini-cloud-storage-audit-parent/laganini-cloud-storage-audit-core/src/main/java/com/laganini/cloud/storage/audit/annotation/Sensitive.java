@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.audit.annotation;
+package org.laganini.cloud.storage.audit.annotation;
 
 import java.lang.annotation.*;
 

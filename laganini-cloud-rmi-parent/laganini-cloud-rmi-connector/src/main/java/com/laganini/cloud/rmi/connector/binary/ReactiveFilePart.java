@@ -1,4 +1,4 @@
-package com.laganini.cloud.rmi.connector.binary;
+package org.laganini.cloud.rmi.connector.binary;
 
 import lombok.ToString;
 import org.springframework.core.io.buffer.DataBuffer;

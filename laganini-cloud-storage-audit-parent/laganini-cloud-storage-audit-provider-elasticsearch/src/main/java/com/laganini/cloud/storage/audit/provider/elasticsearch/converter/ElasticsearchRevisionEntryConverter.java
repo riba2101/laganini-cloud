@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch.converter;
+package org.laganini.cloud.storage.audit.provider.elasticsearch.converter;
 
-import com.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
-import com.laganini.cloud.storage.audit.dto.RevisionEntry;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevisionEntry;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
+import org.laganini.cloud.storage.audit.dto.RevisionEntry;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevisionEntry;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 
 public class ElasticsearchRevisionEntryConverter
         implements RevisionEntryConverter<RevisionEntry, ElasticsearchRevisionEntry>

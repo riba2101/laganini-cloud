@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.filter;
+package org.laganini.cloud.storage.filter;
 
-import com.laganini.cloud.storage.converter.Encodable;
+import org.laganini.cloud.storage.converter.Encodable;
 
 public class EnumFieldConverter<E extends Enum<E> & Encodable<?>>
         implements AbstractSearchCriteriaMapper.FieldConverter<String, E>

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.dto;
+package org.laganini.cloud.storage.dto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

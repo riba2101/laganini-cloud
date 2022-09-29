@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.jpa.entity;
+package org.laganini.cloud.storage.jpa.entity;
 
-import com.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

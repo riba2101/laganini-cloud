@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
+package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import io.r2dbc.spi.Connection;
 import reactor.core.publisher.Mono;

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.laganini.cloud.storage.audit</groupId>
+        <groupId>org.laganini.cloud.storage.audit</groupId>
         <artifactId>laganini-cloud-storage-audit-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -17,11 +17,11 @@
         </dependency>
 
         <dependency>
-            <groupId>com.laganini.cloud.storage</groupId>
+            <groupId>org.laganini.cloud.storage</groupId>
             <artifactId>laganini-cloud-storage-service-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.laganini.cloud.storage.audit</groupId>
+            <groupId>org.laganini.cloud.storage.audit</groupId>
             <artifactId>laganini-cloud-storage-audit-core</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -41,7 +41,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.laganini.cloud.test</groupId>
+            <groupId>org.laganini.cloud.test</groupId>
             <artifactId>laganini-cloud-test-suite</artifactId>
             <version>${laganini-cloud-test-suite.version}</version>
         </dependency>

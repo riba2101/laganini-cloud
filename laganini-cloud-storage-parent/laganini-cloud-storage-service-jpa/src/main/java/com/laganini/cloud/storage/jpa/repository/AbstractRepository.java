@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.jpa.repository;
+package org.laganini.cloud.storage.jpa.repository;
 
 import com.querydsl.jpa.impl.JPAQuery;
 import org.springframework.data.repository.NoRepositoryBean;

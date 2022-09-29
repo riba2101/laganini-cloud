@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.configuration;
+package org.laganini.cloud.storage.audit.configuration;
 
-import com.laganini.cloud.storage.audit.diff.DefaultDiffService;
-import com.laganini.cloud.storage.audit.diff.DiffService;
+import org.laganini.cloud.storage.audit.diff.DefaultDiffService;
+import org.laganini.cloud.storage.audit.diff.DiffService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 

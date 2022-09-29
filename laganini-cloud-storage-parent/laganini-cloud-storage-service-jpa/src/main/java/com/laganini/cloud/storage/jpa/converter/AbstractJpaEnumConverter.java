@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.jpa.converter;
+package org.laganini.cloud.storage.jpa.converter;
 
-import com.laganini.cloud.storage.converter.AbstractEnumConverter;
-import com.laganini.cloud.storage.converter.Encodable;
+import org.laganini.cloud.storage.converter.AbstractEnumConverter;
+import org.laganini.cloud.storage.converter.Encodable;
 
 import javax.persistence.AttributeConverter;
 

@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.entity;
+package org.laganini.cloud.storage.audit.entity;
 
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
 
 import java.time.LocalDateTime;
 

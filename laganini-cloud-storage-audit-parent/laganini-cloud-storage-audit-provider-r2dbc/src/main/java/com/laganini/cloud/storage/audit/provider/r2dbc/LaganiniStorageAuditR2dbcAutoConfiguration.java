@@ -1,14 +1,14 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc;
+package org.laganini.cloud.storage.audit.provider.r2dbc;
 
-import com.laganini.cloud.logging.author.AuthorReactiveProvider;
-import com.laganini.cloud.storage.audit.aop.AuditedReactiveCrudRepositoryAspect;
-import com.laganini.cloud.storage.audit.aop.handler.AuditedReactiveRepositoryJoinPointHandler;
-import com.laganini.cloud.storage.audit.configuration.AbstractReactiveLaganiniStorageAuditConfiguration;
-import com.laganini.cloud.storage.audit.diff.DiffService;
-import com.laganini.cloud.storage.audit.provider.r2dbc.converter.R2dbcRevisionConverter;
-import com.laganini.cloud.storage.audit.provider.r2dbc.converter.R2dbcRevisionEntryConverter;
-import com.laganini.cloud.storage.audit.service.RevisionEntryReactiveService;
-import com.laganini.cloud.storage.audit.service.RevisionReactiveService;
+import org.laganini.cloud.logging.author.AuthorReactiveProvider;
+import org.laganini.cloud.storage.audit.aop.AuditedReactiveCrudRepositoryAspect;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedReactiveRepositoryJoinPointHandler;
+import org.laganini.cloud.storage.audit.configuration.AbstractReactiveLaganiniStorageAuditConfiguration;
+import org.laganini.cloud.storage.audit.diff.DiffService;
+import org.laganini.cloud.storage.audit.provider.r2dbc.converter.R2dbcRevisionConverter;
+import org.laganini.cloud.storage.audit.provider.r2dbc.converter.R2dbcRevisionEntryConverter;
+import org.laganini.cloud.storage.audit.service.RevisionEntryReactiveService;
+import org.laganini.cloud.storage.audit.service.RevisionReactiveService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

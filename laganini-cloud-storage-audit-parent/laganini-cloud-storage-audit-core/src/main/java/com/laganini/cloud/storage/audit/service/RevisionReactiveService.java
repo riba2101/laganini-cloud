@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.audit.service;
+package org.laganini.cloud.storage.audit.service;
 
-import com.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.dto.Revision;
 import reactor.core.publisher.Mono;
 
 public interface RevisionReactiveService {

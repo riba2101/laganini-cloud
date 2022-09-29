@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.repository;
+package org.laganini.cloud.storage.repository;
 
-import com.laganini.cloud.storage.connector.model.FilterCriteria;
-import com.laganini.cloud.storage.connector.model.FilteredAndSorted;
-import com.laganini.cloud.storage.connector.model.SortCriteria;
+import org.laganini.cloud.storage.connector.model.FilterCriteria;
+import org.laganini.cloud.storage.connector.model.FilteredAndSorted;
+import org.laganini.cloud.storage.connector.model.SortCriteria;
 import org.springframework.data.repository.NoRepositoryBean;
 
 import java.util.Collection;

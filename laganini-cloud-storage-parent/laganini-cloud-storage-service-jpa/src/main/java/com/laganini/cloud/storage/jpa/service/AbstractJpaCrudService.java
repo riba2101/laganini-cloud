@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.jpa.service;
+package org.laganini.cloud.storage.jpa.service;
 
-import com.laganini.cloud.storage.entity.IdentityEntity;
-import com.laganini.cloud.storage.repository.FilterRepository;
-import com.laganini.cloud.storage.service.CrudService;
+import org.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.service.CrudService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;

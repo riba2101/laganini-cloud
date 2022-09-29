@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.service;
+package org.laganini.cloud.storage.service;
 
-import com.laganini.cloud.storage.dto.Owner;
-import com.laganini.cloud.storage.entity.OwnedEntity;
+import org.laganini.cloud.storage.dto.Owner;
+import org.laganini.cloud.storage.entity.OwnedEntity;
 import reactor.core.publisher.Mono;
 
 public interface OwnerService {

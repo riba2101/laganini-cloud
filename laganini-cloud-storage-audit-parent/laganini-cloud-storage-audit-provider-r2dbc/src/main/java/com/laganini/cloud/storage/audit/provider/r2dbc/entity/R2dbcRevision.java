@@ -1,7 +1,7 @@
-package com.laganini.cloud.storage.audit.provider.r2dbc.entity;
+package org.laganini.cloud.storage.audit.provider.r2dbc.entity;
 
-import com.laganini.cloud.storage.audit.entity.RevisionEntity;
-import com.laganini.cloud.storage.audit.provider.r2dbc.AbstractPersistable;
+import org.laganini.cloud.storage.audit.entity.RevisionEntity;
+import org.laganini.cloud.storage.audit.provider.r2dbc.AbstractPersistable;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

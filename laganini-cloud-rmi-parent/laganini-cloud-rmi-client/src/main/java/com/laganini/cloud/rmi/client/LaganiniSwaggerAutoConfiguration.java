@@ -1,8 +1,8 @@
-package com.laganini.cloud.rmi.client;
+package org.laganini.cloud.rmi.client;
 
 import brave.baggage.BaggageField;
 import brave.http.HttpRequestParser;
-import com.laganini.cloud.common.SpanConstants;
+import org.laganini.cloud.common.SpanConstants;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.cloud.sleuth.instrument.web.HttpServerRequestParser;

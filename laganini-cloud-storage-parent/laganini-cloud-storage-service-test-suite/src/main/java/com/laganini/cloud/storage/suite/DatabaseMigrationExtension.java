@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.suite;
+package org.laganini.cloud.storage.suite;
 
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.extension.BeforeEachCallback;

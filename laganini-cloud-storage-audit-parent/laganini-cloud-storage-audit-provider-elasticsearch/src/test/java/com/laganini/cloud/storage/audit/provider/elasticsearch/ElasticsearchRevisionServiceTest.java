@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.audit.provider.elasticsearch;
+package org.laganini.cloud.storage.audit.provider.elasticsearch;
 
-import com.laganini.cloud.storage.audit.provider.AbstractRevisionServiceTest;
-import com.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionConverter;
-import com.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevision;
-import com.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.storage.audit.provider.AbstractRevisionServiceTest;
+import org.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionConverter;
+import org.laganini.cloud.storage.audit.provider.elasticsearch.entity.ElasticsearchRevision;
+import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;

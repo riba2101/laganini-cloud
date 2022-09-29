@@ -1,4 +1,4 @@
-package com.laganini.cloud.validation.group;
+package org.laganini.cloud.validation.group;
 
 import javax.validation.groups.Default;
 

@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.storage.connector.model.Fetchable;
-import com.laganini.cloud.storage.connector.model.Id;
-import com.laganini.cloud.storage.connector.service.CRUDEndpoint;
-import com.laganini.cloud.storage.entity.IdentityEntity;
-import com.laganini.cloud.storage.service.CrudService;
+import org.laganini.cloud.storage.connector.model.Fetchable;
+import org.laganini.cloud.storage.connector.model.Id;
+import org.laganini.cloud.storage.connector.service.CRUDEndpoint;
+import org.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.service.CrudService;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

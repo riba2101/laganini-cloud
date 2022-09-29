@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.laganini.cloud.exception.BusinessExceptionResponse;
-import com.laganini.cloud.storage.ModelBuilder;
-import com.laganini.cloud.storage.connector.model.Fetchable;
-import com.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.exception.BusinessExceptionResponse;
+import org.laganini.cloud.storage.ModelBuilder;
+import org.laganini.cloud.storage.connector.model.Fetchable;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.HttpMethod;

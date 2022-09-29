@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.suite;
+package org.laganini.cloud.storage.suite;
 
-import com.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.test.suite.IntegrationTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
 

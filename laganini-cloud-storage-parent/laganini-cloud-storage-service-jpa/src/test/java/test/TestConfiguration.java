@@ -1,6 +1,6 @@
 package test;
 
-import com.laganini.cloud.storage.jpa.EnableLaganiniCloudStorageJpa;
+import org.laganini.cloud.storage.jpa.EnableLaganiniCloudStorageJpa;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableLaganiniCloudStorageJpa(basePackages = {"test"})

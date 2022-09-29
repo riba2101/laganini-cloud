@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.connector.model;
+package org.laganini.cloud.storage.connector.model;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
-import com.laganini.cloud.common.jackson.TypeInfoIdResolver;
+import org.laganini.cloud.common.jackson.TypeInfoIdResolver;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;

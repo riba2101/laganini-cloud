@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.storage.connector.model.*;
-import com.laganini.cloud.storage.connector.service.FilterableEndpoint;
-import com.laganini.cloud.storage.entity.IdentityEntity;
-import com.laganini.cloud.storage.service.FilterService;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.connector.service.FilterableEndpoint;
+import org.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.service.FilterService;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

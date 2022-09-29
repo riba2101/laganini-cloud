@@ -1,10 +1,10 @@
-package com.laganini.cloud.storage.audit.configuration;
+package org.laganini.cloud.storage.audit.configuration;
 
-import com.laganini.cloud.logging.author.AuthorProvider;
-import com.laganini.cloud.logging.author.DefaultAuthorProvider;
-import com.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
-import com.laganini.cloud.storage.audit.service.RevisionEntryService;
-import com.laganini.cloud.storage.audit.service.RevisionService;
+import org.laganini.cloud.logging.author.AuthorProvider;
+import org.laganini.cloud.logging.author.DefaultAuthorProvider;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
+import org.laganini.cloud.storage.audit.service.RevisionEntryService;
+import org.laganini.cloud.storage.audit.service.RevisionService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 

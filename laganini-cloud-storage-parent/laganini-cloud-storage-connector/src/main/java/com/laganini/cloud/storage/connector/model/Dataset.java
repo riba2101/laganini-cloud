@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.connector.model;
+package org.laganini.cloud.storage.connector.model;
 
 import lombok.*;
 

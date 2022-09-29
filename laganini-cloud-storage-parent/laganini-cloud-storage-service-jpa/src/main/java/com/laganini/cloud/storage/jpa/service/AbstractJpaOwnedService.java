@@ -1,12 +1,12 @@
-package com.laganini.cloud.storage.jpa.service;
+package org.laganini.cloud.storage.jpa.service;
 
-import com.laganini.cloud.storage.connector.model.Filter;
-import com.laganini.cloud.storage.connector.model.FilterCriteria;
-import com.laganini.cloud.storage.connector.model.Operator;
-import com.laganini.cloud.storage.connector.service.OwnedEndpoint;
-import com.laganini.cloud.storage.entity.OwnedEntity;
-import com.laganini.cloud.storage.repository.FilterRepository;
-import com.laganini.cloud.storage.service.OwnedService;
+import org.laganini.cloud.storage.connector.model.Filter;
+import org.laganini.cloud.storage.connector.model.FilterCriteria;
+import org.laganini.cloud.storage.connector.model.Operator;
+import org.laganini.cloud.storage.connector.service.OwnedEndpoint;
+import org.laganini.cloud.storage.entity.OwnedEntity;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.service.OwnedService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;

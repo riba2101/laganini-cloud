@@ -1,12 +1,12 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.storage.connector.model.*;
-import com.laganini.cloud.storage.connector.service.PurgeableEndpoint;
-import com.laganini.cloud.storage.dto.Owner;
-import com.laganini.cloud.storage.entity.PurgeableEntity;
-import com.laganini.cloud.storage.service.OwnerService;
-import com.laganini.cloud.storage.service.PurgeableService;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.connector.service.PurgeableEndpoint;
+import org.laganini.cloud.storage.dto.Owner;
+import org.laganini.cloud.storage.entity.PurgeableEntity;
+import org.laganini.cloud.storage.service.OwnerService;
+import org.laganini.cloud.storage.service.PurgeableService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.validation.annotation.Validated;

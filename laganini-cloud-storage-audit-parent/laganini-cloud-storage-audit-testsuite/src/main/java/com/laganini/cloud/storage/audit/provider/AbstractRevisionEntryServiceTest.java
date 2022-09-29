@@ -1,12 +1,12 @@
-package com.laganini.cloud.storage.audit.provider;
+package org.laganini.cloud.storage.audit.provider;
 
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.dto.RevisionEntry;
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.entity.RevisionEntity;
-import com.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
-import com.laganini.cloud.storage.audit.service.RevisionEntryService;
-import com.laganini.cloud.storage.audit.service.RevisionService;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.dto.RevisionEntry;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntity;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
+import org.laganini.cloud.storage.audit.service.RevisionEntryService;
+import org.laganini.cloud.storage.audit.service.RevisionService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

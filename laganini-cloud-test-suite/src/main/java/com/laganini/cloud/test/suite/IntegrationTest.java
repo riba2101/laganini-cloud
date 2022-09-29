@@ -1,4 +1,4 @@
-package com.laganini.cloud.test.suite;
+package org.laganini.cloud.test.suite;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.annotation.AliasFor;

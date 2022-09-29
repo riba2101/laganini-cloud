@@ -1,6 +1,6 @@
 package test.repository;
 
-import com.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.test.suite.IntegrationTest;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

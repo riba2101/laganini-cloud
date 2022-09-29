@@ -1,12 +1,12 @@
-package com.laganini.cloud.storage.endpoint;
+package org.laganini.cloud.storage.endpoint;
 
-import com.laganini.cloud.exception.ExceptionType;
-import com.laganini.cloud.storage.connector.model.*;
-import com.laganini.cloud.storage.connector.service.OwnedEndpoint;
-import com.laganini.cloud.storage.dto.Owner;
-import com.laganini.cloud.storage.entity.OwnedEntity;
-import com.laganini.cloud.storage.service.OwnedService;
-import com.laganini.cloud.storage.service.OwnerService;
+import org.laganini.cloud.exception.ExceptionType;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.connector.service.OwnedEndpoint;
+import org.laganini.cloud.storage.dto.Owner;
+import org.laganini.cloud.storage.entity.OwnedEntity;
+import org.laganini.cloud.storage.service.OwnedService;
+import org.laganini.cloud.storage.service.OwnerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.validation.annotation.Validated;

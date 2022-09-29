@@ -1,9 +1,9 @@
-package com.laganini.cloud.storage.querydsl;
+package org.laganini.cloud.storage.querydsl;
 
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
-import com.laganini.cloud.storage.r2dbc.querydsl.r2dbc.ProjectableR2dbcQuery;
-import com.laganini.cloud.storage.repository.QTestEntity;
-import com.laganini.cloud.test.testcontainer.MariaDBContainer;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQueryFactory;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.ProjectableR2dbcQuery;
+import org.laganini.cloud.storage.repository.QTestEntity;
+import org.laganini.cloud.test.testcontainer.MariaDBContainer;
 import com.querydsl.sql.SQLExpressions;
 import io.r2dbc.spi.ConnectionFactory;
 import org.flywaydb.core.Flyway;

@@ -1,6 +1,6 @@
-package com.laganini.cloud.rmi.service;
+package org.laganini.cloud.rmi.service;
 
-import com.laganini.cloud.test.testcontainer.MariaDBContainer;
+import org.laganini.cloud.test.testcontainer.MariaDBContainer;
 import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

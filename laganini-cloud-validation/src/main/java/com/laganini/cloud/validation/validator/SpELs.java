@@ -1,4 +1,4 @@
-package com.laganini.cloud.validation.validator;
+package org.laganini.cloud.validation.validator;
 
 import java.lang.annotation.*;
 

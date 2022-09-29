@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.audit.provider.jpa.converter;
+package org.laganini.cloud.storage.audit.provider.jpa.converter;
 
-import com.laganini.cloud.storage.audit.converter.RevisionConverter;
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
+import org.laganini.cloud.storage.audit.converter.RevisionConverter;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
 
 public class JpaRevisionConverter implements RevisionConverter<Revision, JpaRevision> {
 

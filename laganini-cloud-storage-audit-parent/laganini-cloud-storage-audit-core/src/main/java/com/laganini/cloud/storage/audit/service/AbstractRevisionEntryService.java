@@ -1,13 +1,13 @@
-package com.laganini.cloud.storage.audit.service;
+package org.laganini.cloud.storage.audit.service;
 
-import com.laganini.cloud.logging.author.AuthorProvider;
-import com.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
-import com.laganini.cloud.storage.audit.diff.DiffService;
-import com.laganini.cloud.storage.audit.dto.Revision;
-import com.laganini.cloud.storage.audit.dto.RevisionEntry;
-import com.laganini.cloud.storage.audit.dto.RevisionOperation;
-import com.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
-import com.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
+import org.laganini.cloud.logging.author.AuthorProvider;
+import org.laganini.cloud.storage.audit.converter.RevisionEntryConverter;
+import org.laganini.cloud.storage.audit.diff.DiffService;
+import org.laganini.cloud.storage.audit.dto.Revision;
+import org.laganini.cloud.storage.audit.dto.RevisionEntry;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
+import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
 
 import java.time.Clock;
 import java.time.LocalDateTime;

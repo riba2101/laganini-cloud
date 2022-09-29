@@ -1,8 +1,8 @@
-package com.laganini.cloud.storage.audit.provider;
+package org.laganini.cloud.storage.audit.provider;
 
-import com.laganini.cloud.storage.audit.annotation.Audited;
-import com.laganini.cloud.storage.audit.entity.RevisionEntity;
-import com.laganini.cloud.storage.entity.IdentityEntity;
+import org.laganini.cloud.storage.audit.annotation.Audited;
+import org.laganini.cloud.storage.audit.entity.RevisionEntity;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.entity;
+package org.laganini.cloud.storage.entity;
 
 public interface OwnedEntity<ID>
         extends IdentityEntity<ID>

@@ -1,4 +1,4 @@
-package com.laganini.cloud.storage.jpa.converter;
+package org.laganini.cloud.storage.jpa.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
-package com.laganini.cloud.storage.service;
+package org.laganini.cloud.storage.service;
 
-import com.laganini.cloud.storage.entity.PurgeableEntity;
+import org.laganini.cloud.storage.entity.PurgeableEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import reactor.core.publisher.Mono;
 
