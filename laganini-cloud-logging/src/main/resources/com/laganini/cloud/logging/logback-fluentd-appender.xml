@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
+        <tag>${APPLICATION}</tag>
+        <label>${APPLICATION}</label>
+        <remoteHost>${FLUENTD_HOST}</remoteHost>
+        <port>${FLUENTD_PORT}</port>
+    </appender>
+
+    <appender name="ASYNC_FLUENT" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FLUENT"/>
+    </appender>
+
+</included>
+
+

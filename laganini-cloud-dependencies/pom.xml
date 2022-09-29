@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.laganini.cloud</groupId>
+        <artifactId>laganini</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>laganini-cloud-dependencies</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <spring-boot.version>2.7.4</spring-boot.version>
+        <spring-cloud.version>2021.0.4</spring-cloud.version>
+
+        <feign-reactor.version>3.0.3</feign-reactor.version>
+        <resilience4j.version>1.7.0</resilience4j.version>
+
+        <testcontainers.version>1.17.3</testcontainers.version>
+
+        <laganini-cloud-common.version>${project.version}</laganini-cloud-common.version>
+        <laganini-cloud-rmi.version>${project.version}</laganini-cloud-rmi.version>
+        <laganini-cloud-metrics.version>${project.version}</laganini-cloud-metrics.version>
+        <laganini-cloud-logging.version>${project.version}</laganini-cloud-logging.version>
+        <laganini-cloud-validation.version>${project.version}</laganini-cloud-validation.version>
+        <laganini-cloud-storage-audit.version>${project.version}</laganini-cloud-storage-audit.version>
+        <laganini-cloud-storage.version>${project.version}</laganini-cloud-storage.version>
+        <laganini-cloud-exception.version>${project.version}</laganini-cloud-exception.version>
+        <laganini-cloud-test-suite.version>${project.version}</laganini-cloud-test-suite.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--BOM-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.playtika.reactivefeign</groupId>
+                <artifactId>feign-reactor-bom</artifactId>
+                <version>${feign-reactor.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>io.github.resilience4j</groupId>
+                <artifactId>resilience4j-bom</artifactId>
+                <version>${resilience4j.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!--LIBS-->
+            <dependency>
+                <groupId>com.laganini.cloud</groupId>
+                <artifactId>laganini-cloud-common</artifactId>
+                <version>${laganini-cloud-common.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.rmi</groupId>
+                <artifactId>laganini-cloud-rmi-client</artifactId>
+                <version>${laganini-cloud-rmi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.rmi</groupId>
+                <artifactId>laganini-cloud-rmi-connector</artifactId>
+                <version>${laganini-cloud-rmi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.rmi</groupId>
+                <artifactId>laganini-cloud-rmi-service</artifactId>
+                <version>${laganini-cloud-rmi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.metrics</groupId>
+                <artifactId>laganini-cloud-metrics-prometheus</artifactId>
+                <version>${laganini-cloud-metrics.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.logging</groupId>
+                <artifactId>laganini-cloud-logging</artifactId>
+                <version>${laganini-cloud-logging.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.validation</groupId>
+                <artifactId>laganini-cloud-validation</artifactId>
+                <version>${laganini-cloud-validation.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.exception</groupId>
+                <artifactId>laganini-cloud-exception</artifactId>
+                <version>${laganini-cloud-exception.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-connector</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-jpa</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-r2dbc</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-test-suite</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.storage.audit</groupId>
+                <artifactId>laganini-cloud-storage-audit-provider-elasticsearch</artifactId>
+                <version>${laganini-cloud-storage-audit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage.audit</groupId>
+                <artifactId>laganini-cloud-storage-audit-provider-reactive-elasticsearch</artifactId>
+                <version>${laganini-cloud-storage-audit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage.audit</groupId>
+                <artifactId>laganini-cloud-storage-audit-provider-jpa</artifactId>
+                <version>${laganini-cloud-storage-audit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.laganini.cloud.storage.audit</groupId>
+                <artifactId>laganini-cloud-storage-audit-provider-r2dbc</artifactId>
+                <version>${laganini-cloud-storage-audit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.laganini.cloud.test</groupId>
+                <artifactId>laganini-cloud-test-suite</artifactId>
+                <version>${laganini-cloud-test-suite.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

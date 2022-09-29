@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.laganini.cloud</groupId>
+        <artifactId>laganini-cloud-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../laganini-cloud-parent</relativePath>
+    </parent>
+
+    <groupId>com.laganini.cloud.logging</groupId>
+    <artifactId>laganini-cloud-logging</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>laganini-cloud-logging</name>
+    <description>Laganini Cloud logging</description>
+
+    <properties>
+        <spring-cloud-sleuth.version>1.1.0</spring-cloud-sleuth.version>
+
+        <fluent-logger.version>0.3.3</fluent-logger.version>
+        <logback-more-appenders.version>1.5.0</logback-more-appenders.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.laganini.cloud</groupId>
+            <artifactId>laganini-cloud-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.fluentd</groupId>
+            <artifactId>fluent-logger</artifactId>
+            <version>${fluent-logger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sndyuk</groupId>
+            <artifactId>logback-more-appenders</artifactId>
+            <version>${logback-more-appenders.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-sleuth-otel-dependencies</artifactId>
+                <version>${spring-cloud-sleuth.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

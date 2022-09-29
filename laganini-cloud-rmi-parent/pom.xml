@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.laganini.cloud</groupId>
+        <artifactId>laganini-cloud-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../laganini-cloud-parent</relativePath>
+    </parent>
+
+    <groupId>com.laganini.cloud.rmi</groupId>
+    <artifactId>laganini-cloud-rmi-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>laganini-cloud-rmi-parent</name>
+    <description>Laganini Cloud RMI Parent</description>
+
+    <modules>
+        <module>laganini-cloud-rmi-connector</module>
+        <module>laganini-cloud-rmi-client</module>
+        <module>laganini-cloud-rmi-service</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laganini.cloud.metrics</groupId>
+            <artifactId>laganini-cloud-metrics-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laganini.cloud.validation</groupId>
+            <artifactId>laganini-cloud-validation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.laganini.cloud.exception</groupId>
+            <artifactId>laganini-cloud-exception</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

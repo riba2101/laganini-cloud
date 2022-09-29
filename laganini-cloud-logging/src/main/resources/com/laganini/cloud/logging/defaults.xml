@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <springProperty scope="context" name="APPLICATION" source="spring.application.name"/>
+
+    <springProperty scope="context" name="SLACK_TOKEN" source="slack.token"/>
+    <springProperty scope="context" name="SLACK_CHANNEL" source="slack.channel"/>
+    <springProperty scope="context" name="SLACK_USER" source="spring.application.name"/>
+    <property name="SLACK_LOG_PATTERN" value="%-4relative [%thread] %-5level %class - %msg%n"/>
+
+    <springProperty scope="context" name="FLUENTD_HOST" source="fluentd.host" defaultValue="localhost"/>
+    <springProperty scope="context" name="FLUENTD_PORT" source="fluentd.port" defaultValue="24224"/>
+
+</included>

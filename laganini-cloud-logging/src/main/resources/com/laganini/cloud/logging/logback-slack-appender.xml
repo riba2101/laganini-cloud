@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <appender name="SLACK" class="com.github.maricn.logback.SlackAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+
+        <!-- Slack API token -->
+        <token>${SLACK_TOKEN}</token>
+        <!-- Slack incoming webhook uri. Uncomment the lines below to use incoming webhook uri instead of API token. -->
+        <!--
+        <webhookUri>https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX</webhookUri>
+        -->
+        <!-- Channel that you want to post - default is #general -->
+        <channel>${SLACK_CHANNEL}</channel>
+        <!-- Formatting (you can use Slack formatting - URL links, code formatting, etc.) -->
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>${SLACK_LOG_PATTERN}</pattern>
+        </layout>
+        <!-- Username of the messages sender -->
+        <username>${SLACK_USER}</username>
+        <!-- Emoji to be used for messages -->
+        <iconEmoji>:stuck_out_tongue_winking_eye:</iconEmoji>
+    </appender>
+
+    <appender name="ASYNC_SLACK" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="SLACK"/>
+    </appender>
+</included>
