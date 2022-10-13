@@ -1,6 +1,9 @@
 package org.laganini.cloud.storage.audit.aop.handler;
 
+import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.JoinPoint;
 import org.laganini.cloud.storage.audit.annotation.Audited;
+import org.laganini.cloud.storage.audit.aop.LaganiniStorageAuditAopAutoConfiguration;
 import org.laganini.cloud.storage.audit.dto.Revision;
 import org.laganini.cloud.storage.audit.dto.RevisionEntry;
 import org.laganini.cloud.storage.audit.dto.RevisionOperation;
@@ -8,10 +11,9 @@ import org.laganini.cloud.storage.audit.service.RevisionEntryService;
 import org.laganini.cloud.storage.audit.service.RevisionService;
 import org.laganini.cloud.storage.audit.utils.AuditedUtils;
 import org.laganini.cloud.storage.entity.IdentityEntity;
-import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
 import org.springframework.data.repository.core.RepositoryMetadata;
 import org.springframework.data.repository.core.support.DefaultRepositoryMetadata;
+import org.springframework.scheduling.annotation.Async;
 
 @Slf4j
 public class AuditedRepositoryJoinPointHandler extends AbstractAuditedJoinPointHandler {
@@ -28,6 +30,7 @@ public class AuditedRepositoryJoinPointHandler extends AbstractAuditedJoinPointH
         this.revisionEntryService = revisionEntryService;
     }
 
+    @Async(LaganiniStorageAuditAopAutoConfiguration.ASYNC_EXECUTOR_BEAN)
     public void onDelete(JoinPoint pjp) {
         Audited audited = getAuditedAnnotation(pjp);
         if (audited == null) {
@@ -48,6 +51,7 @@ public class AuditedRepositoryJoinPointHandler extends AbstractAuditedJoinPointH
         arguments.forEach(argument -> registerRevision(audited, metadata, RevisionOperation.DELETE, argument));
     }
 
+    @Async(LaganiniStorageAuditAopAutoConfiguration.ASYNC_EXECUTOR_BEAN)
     public void onSave(JoinPoint pjp, Object responseEntity) {
         Audited audited = getAuditedAnnotation(pjp);
         if (audited == null) {

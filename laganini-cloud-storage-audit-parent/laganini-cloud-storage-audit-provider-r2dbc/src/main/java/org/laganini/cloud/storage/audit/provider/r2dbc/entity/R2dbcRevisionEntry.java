@@ -1,12 +1,12 @@
 package org.laganini.cloud.storage.audit.provider.r2dbc.entity;
 
-import org.laganini.cloud.storage.audit.dto.RevisionOperation;
-import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
-import org.laganini.cloud.storage.audit.provider.r2dbc.AbstractPersistable;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
+import org.laganini.cloud.storage.audit.provider.r2dbc.AbstractPersistable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 

@@ -1,7 +1,7 @@
 package org.laganini.cloud.storage.audit.provider.jpa;
 
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Import;
+import org.laganini.cloud.storage.audit.aop.LaganiniStorageAuditAopAutoConfiguration;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
 import java.lang.annotation.*;
 
@@ -9,15 +9,11 @@ import java.lang.annotation.*;
 @Inherited
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-//@EnableJpaRepositories
-@EnableAspectJAutoProxy
-@Import(LaganiniStorageAuditInitializer.class)
+@ImportAutoConfiguration({
+        LaganiniStorageAuditAopAutoConfiguration.class,
+        LaganiniStorageAuditJpaProviderAutoConfiguration.class,
+        LaganiniStorageAuditJpaAutoConfiguration.class
+})
 public @interface EnableLaganiniCloudStorageAuditJpa {
-
-//    @AliasFor(annotation = EnableJpaRepositories.class, attribute = "basePackages")
-//    String[] basePackages() default {"org.laganini.cloud.storage.audit.provider.jpa"};
-//
-//    @AliasFor(annotation = EnableJpaRepositories.class, attribute = "entityManagerFactoryRef")
-//    String entityManagerFactoryRef() default "entityManagerFactory";
 
 }

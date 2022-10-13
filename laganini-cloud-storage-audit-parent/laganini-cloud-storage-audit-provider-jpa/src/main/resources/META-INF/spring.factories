@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.laganini.cloud.storage.audit.provider.jpa.LaganiniStorageAuditJpaAutoConfiguration

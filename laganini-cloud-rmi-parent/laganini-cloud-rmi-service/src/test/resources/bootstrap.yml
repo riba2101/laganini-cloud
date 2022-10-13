@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    kubernetes:
+      config.enabled: false
+      discovery.enabled: false
+      reload.enabled: false
+      secrets.enabled: false
+      loadbalancer.enabled: false
+    discovery:
+      client:
+        simple:
+          instances:
+            service-test:
+              - instanceId: service-test-0
+                serviceId: service-test
+                uri: http://localhost:18080
+    loadbalancer:
+      ribbon:
+        enabled: false

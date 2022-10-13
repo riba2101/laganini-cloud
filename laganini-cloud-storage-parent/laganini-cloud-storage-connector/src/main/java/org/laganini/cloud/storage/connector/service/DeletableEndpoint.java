@@ -5,6 +5,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
@@ -19,6 +20,6 @@ public interface DeletableEndpoint<ID> {
 
     @Validated
     @RequestMapping(path = "/delete-by-ids", method = RequestMethod.POST)
-    Mono<Void> delete(@RequestBody @Valid @NotNull Collection<Id<ID>> ids);
+    Flux<Void> delete(@RequestBody @Valid @NotNull Collection<Id<ID>> ids);
 
 }

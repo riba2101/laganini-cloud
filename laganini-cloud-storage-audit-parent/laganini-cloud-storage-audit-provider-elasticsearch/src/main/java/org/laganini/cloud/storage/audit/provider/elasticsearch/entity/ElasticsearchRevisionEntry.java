@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.audit.provider.elasticsearch.entity;
 
-import org.laganini.cloud.storage.audit.dto.RevisionOperation;
-import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;

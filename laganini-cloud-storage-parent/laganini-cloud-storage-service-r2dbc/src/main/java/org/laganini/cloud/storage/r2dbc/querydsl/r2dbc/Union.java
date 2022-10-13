@@ -1,7 +1,7 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 import com.querydsl.core.types.*;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 
 /**
  * {@link Union} defines an interface for Union queries

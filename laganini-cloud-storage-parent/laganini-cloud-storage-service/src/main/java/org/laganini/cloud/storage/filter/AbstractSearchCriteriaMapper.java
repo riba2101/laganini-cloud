@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.filter;
 
-import org.laganini.cloud.storage.connector.model.FilterCriteria;
-import org.laganini.cloud.storage.connector.model.SortCriteria;
 import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.Predicate;
 import lombok.Value;
+import org.laganini.cloud.storage.connector.model.FilterCriteria;
+import org.laganini.cloud.storage.connector.model.SortCriteria;
 import org.springframework.core.convert.converter.Converter;
 
 import java.util.Collection;

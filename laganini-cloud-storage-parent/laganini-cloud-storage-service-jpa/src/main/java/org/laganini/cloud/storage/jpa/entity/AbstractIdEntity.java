@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.jpa.entity;
 
-import org.laganini.cloud.storage.entity.IdentityEntity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,11 +26,6 @@ public abstract class AbstractIdEntity<ID>
     public ID id;
 
     protected AbstractIdEntity() {
-    }
-
-    @Override
-    public ID getId() {
-        return id;
     }
 
 }

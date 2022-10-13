@@ -1,29 +1,32 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @Getter
-@Setter
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class AbstractPurgeableBase<ID>
-        extends AbstractOwnedBase<ID>
+        extends AbstractEntityBase<ID>
 {
 
-    private LocalDateTime deletedAt;
+    private final LocalDateTime deletedAt;
 
-    public AbstractPurgeableBase(
+    protected AbstractPurgeableBase() {
+        this(null, null, null, null);
+    }
+
+    protected AbstractPurgeableBase(
             ID id,
-            Long ownerId,
             LocalDateTime deletedAt,
             LocalDateTime createdAt,
             LocalDateTime modifiedAt
     )
     {
-        super(id, ownerId, createdAt, modifiedAt);
+        super(id, createdAt, modifiedAt);
 
         this.deletedAt = deletedAt;
     }

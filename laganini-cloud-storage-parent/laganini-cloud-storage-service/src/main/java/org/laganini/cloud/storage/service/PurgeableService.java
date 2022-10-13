@@ -1,27 +1,22 @@
 package org.laganini.cloud.storage.service;
 
-import org.laganini.cloud.storage.entity.PurgeableEntity;
-import org.springframework.web.bind.annotation.RequestBody;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.util.Collection;
 
-public interface PurgeableService<ID, ENTITY extends PurgeableEntity<ID>>
-        extends OwnedService<ID, ENTITY>
-{
+public interface PurgeableService<ID> {
 
-    Mono<Void> markAsDeleted(@RequestBody @Valid @NotNull ID id);
+    Mono<Void> markAsDeleted(ID id);
 
-    Mono<Void> markAsDeleted(@RequestBody @Valid @NotNull Collection<ID> ids);
+    Flux<Void> markAsDeleted(Collection<ID> ids);
 
-    Mono<Void> unmarkAsDeleted(@RequestBody @Valid @NotNull ID id);
+    Mono<Void> unmarkAsDeleted(ID id);
 
-    Mono<Void> unmarkAsDeleted(@RequestBody @Valid @NotNull Collection<ID> ids);
+    Flux<Void> unmarkAsDeleted(Collection<ID> ids);
 
     Mono<Void> purge(ID id);
 
-    Mono<Void> purge(Collection<ID> ids);
+    Flux<Void> purge(Collection<ID> ids);
 
 }

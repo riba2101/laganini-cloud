@@ -2,8 +2,6 @@ package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Sets;
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.support.FetchableSubQueryBase;
 import com.querydsl.core.JoinFlag;
 import com.querydsl.core.Query;
 import com.querydsl.core.QueryFlag;
@@ -11,6 +9,8 @@ import com.querydsl.core.support.QueryMixin;
 import com.querydsl.core.types.*;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.sql.*;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.FetchableR2dbcQuery;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.support.FetchableSubQueryBase;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
@@ -21,26 +21,17 @@ import java.util.Set;
 import static com.google.common.collect.Lists.newArrayList;
 
 /**
- * {@link ProjectableR2dbcQuery} is the base type for SQL query implementations
- *
- * @param <T> result type
- * @param <Q> concrete subtype
+ * {@link ProjectableR2dbcQuery} is the base type for SQL query implementations * * @param <T> result type * @param <Q> concrete subtype
  */
 public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T, Q> & Query<Q>>
-        extends FetchableSubQueryBase<T, Q>
-        implements SQLCommonQuery<Q>, FetchableR2dbcQuery<T, Q>
+        extends FetchableSubQueryBase<T, Q> implements SQLCommonQuery<Q>, FetchableR2dbcQuery<T, Q>
 {
-
-    private static final Path<?> defaultQueryAlias = ExpressionUtils.path(Object.class, "query");
-
-    protected final Configuration configuration;
-
+    private static final Path<?>               defaultQueryAlias = ExpressionUtils.path(Object.class, "query");
+    protected final      Configuration         configuration;
     @Nullable
-    protected Expression<?> union;
-
-    protected SubQueryExpression<?> firstUnionSubQuery;
-
-    protected boolean unionAll;
+    protected            Expression<?>         union;
+    protected            SubQueryExpression<?> firstUnionSubQuery;
+    protected            boolean               unionAll;
 
     @SuppressWarnings("unchecked")
     public ProjectableR2dbcQuery(QueryMixin<Q> queryMixin, Configuration configuration) {
@@ -49,37 +40,26 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
         this.configuration = configuration;
     }
 
-    protected Configuration getConfiguration() {
-        return configuration;
-    }
+    protected Configuration getConfiguration() {return configuration;}
 
     @Override
     public <R, C> R accept(Visitor<R, C> v, @Nullable C context) {
         if (union != null) {
-            return union.accept(v, context);
-        } else {
-            return super.accept(v, context);
-        }
+            return union.accept(
+                    v,
+                    context
+            );
+        } else {return super.accept(v, context);}
     }
 
     /**
-     * Add the given String literal as a join flag to the last added join with the position
-     * BEFORE_TARGET
-     *
-     * @param flag join flag
-     * @return the current object
+     * Add the given String literal as a join flag to the last added join with the position     * BEFORE_TARGET     *     * @param flag join flag     * @return the current object
      */
     @Override
-    public Q addJoinFlag(String flag) {
-        return addJoinFlag(flag, JoinFlag.Position.BEFORE_TARGET);
-    }
+    public Q addJoinFlag(String flag) {return addJoinFlag(flag, JoinFlag.Position.BEFORE_TARGET);}
 
     /**
-     * Add the given String literal as a join flag to the last added join
-     *
-     * @param flag     join flag
-     * @param position position
-     * @return the current object
+     * Add the given String literal as a join flag to the last added join     *     * @param flag     join flag     * @param position position     * @return the current object
      */
     @Override
     @SuppressWarnings("unchecked")
@@ -89,241 +69,169 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     }
 
     /**
-     * Add the given prefix and expression as a general query flag
-     *
-     * @param position position of the flag
-     * @param prefix   prefix for the flag
-     * @param expr     expression of the flag
-     * @return the current object
+     * Add the given prefix and expression as a general query flag     *     * @param position position of the flag     * @param prefix   prefix for the flag     * @param expr     expression of the flag     * @return the current object
      */
     @Override
-    public Q addFlag(QueryFlag.Position position, String prefix, Expression<?> expr) {
+    public Q addFlag(
+            QueryFlag.Position position,
+            String prefix,
+            Expression<?> expr
+    )
+    {
         Expression<?> flag = Expressions.template(expr.getType(), prefix + "{0}", expr);
         return queryMixin.addFlag(new QueryFlag(position, flag));
     }
 
     /**
-     * Add the given query flag
-     *
-     * @param flag query flag
-     * @return the current object
+     * Add the given query flag     *     * @param flag query flag     * @return the current object
      */
-    public Q addFlag(QueryFlag flag) {
-        return queryMixin.addFlag(flag);
-    }
+    public Q addFlag(QueryFlag flag) {return queryMixin.addFlag(flag);}
 
     /**
-     * Add the given String literal as query flag
-     *
-     * @param position position
-     * @param flag     query flag
-     * @return the current object
+     * Add the given String literal as query flag     *     * @param position position     * @param flag     query flag     * @return the current object
      */
     @Override
     public Q addFlag(QueryFlag.Position position, String flag) {
-        return queryMixin.addFlag(new QueryFlag(position, flag));
+        return queryMixin.addFlag(new QueryFlag(
+                position,
+                flag
+        ));
     }
 
     /**
-     * Add the given Expression as a query flag
-     *
-     * @param position position
-     * @param flag     query flag
-     * @return the current object
+     * Add the given Expression as a query flag     *     * @param position position     * @param flag     query flag     * @return the current object
      */
     @Override
     public Q addFlag(QueryFlag.Position position, Expression<?> flag) {
-        return queryMixin.addFlag(new QueryFlag(position, flag));
+        return queryMixin.addFlag(new QueryFlag(
+                position,
+                flag
+        ));
     }
 
-    public Q from(Expression<?> arg) {
-        return queryMixin.from(arg);
-    }
+    public Q from(Expression<?> arg) {return queryMixin.from(arg);}
 
     @Override
-    public Q from(Expression<?>... args) {
-        return queryMixin.from(args);
-    }
+    public Q from(Expression<?>... args) {return queryMixin.from(args);}
 
     @Override
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public Q from(SubQueryExpression<?> subQuery, Path<?> alias) {
-        return queryMixin.from(ExpressionUtils.as((Expression) subQuery, alias));
-    }
+    public Q from(
+            SubQueryExpression<?> subQuery,
+            Path<?> alias
+    )
+    {return queryMixin.from(ExpressionUtils.as((Expression) subQuery, alias));}
 
     @Override
-    public Q fullJoin(EntityPath<?> target) {
-        return queryMixin.fullJoin(target);
-    }
+    public Q fullJoin(EntityPath<?> target) {return queryMixin.fullJoin(target);}
 
     @Override
-    public <E> Q fullJoin(EntityPath<E> target, Path<E> alias) {
-        return queryMixin.fullJoin(target, alias);
-    }
+    public <E> Q fullJoin(EntityPath<E> target, Path<E> alias) {return queryMixin.fullJoin(target, alias);}
 
     @Override
-    public <E> Q fullJoin(RelationalFunctionCall<E> target, Path<E> alias) {
-        return queryMixin.fullJoin(target, alias);
-    }
+    public <E> Q fullJoin(RelationalFunctionCall<E> target, Path<E> alias) {return queryMixin.fullJoin(target, alias);}
 
     @Override
-    public Q fullJoin(SubQueryExpression<?> target, Path<?> alias) {
-        return queryMixin.fullJoin(target, alias);
-    }
+    public Q fullJoin(SubQueryExpression<?> target, Path<?> alias) {return queryMixin.fullJoin(target, alias);}
 
     @Override
     public <E> Q fullJoin(ForeignKey<E> key, RelationalPath<E> entity) {
-        return queryMixin
-                .fullJoin(entity)
-                .on(key.on(entity));
+        return queryMixin.fullJoin(entity).on(key.on(entity));
     }
 
     @Override
-    public Q innerJoin(EntityPath<?> target) {
-        return queryMixin.innerJoin(target);
-    }
+    public Q innerJoin(EntityPath<?> target) {return queryMixin.innerJoin(target);}
 
     @Override
-    public <E> Q innerJoin(EntityPath<E> target, Path<E> alias) {
-        return queryMixin.innerJoin(target, alias);
-    }
+    public <E> Q innerJoin(EntityPath<E> target, Path<E> alias) {return queryMixin.innerJoin(target, alias);}
 
     @Override
     public <E> Q innerJoin(RelationalFunctionCall<E> target, Path<E> alias) {
-        return queryMixin.innerJoin(target, alias);
+        return queryMixin.innerJoin(
+                target,
+                alias
+        );
     }
 
     @Override
-    public Q innerJoin(SubQueryExpression<?> target, Path<?> alias) {
-        return queryMixin.innerJoin(target, alias);
-    }
+    public Q innerJoin(SubQueryExpression<?> target, Path<?> alias) {return queryMixin.innerJoin(target, alias);}
 
     @Override
     public <E> Q innerJoin(ForeignKey<E> key, RelationalPath<E> entity) {
-        return queryMixin
-                .innerJoin(entity)
-                .on(key.on(entity));
+        return queryMixin.innerJoin(entity).on(key.on(entity));
     }
 
     @Override
-    public Q join(EntityPath<?> target) {
-        return queryMixin.join(target);
-    }
+    public Q join(EntityPath<?> target) {return queryMixin.join(target);}
 
     @Override
-    public <E> Q join(EntityPath<E> target, Path<E> alias) {
-        return queryMixin.join(target, alias);
-    }
+    public <E> Q join(EntityPath<E> target, Path<E> alias) {return queryMixin.join(target, alias);}
 
     @Override
-    public <E> Q join(RelationalFunctionCall<E> target, Path<E> alias) {
-        return queryMixin.join(target, alias);
-    }
+    public <E> Q join(RelationalFunctionCall<E> target, Path<E> alias) {return queryMixin.join(target, alias);}
 
     @Override
-    public Q join(SubQueryExpression<?> target, Path<?> alias) {
-        return queryMixin.join(target, alias);
-    }
+    public Q join(SubQueryExpression<?> target, Path<?> alias) {return queryMixin.join(target, alias);}
 
     @Override
-    public <E> Q join(ForeignKey<E> key, RelationalPath<E> entity) {
-        return queryMixin
-                .join(entity)
-                .on(key.on(entity));
-    }
+    public <E> Q join(ForeignKey<E> key, RelationalPath<E> entity) {return queryMixin.join(entity).on(key.on(entity));}
 
     @Override
-    public Q leftJoin(EntityPath<?> target) {
-        return queryMixin.leftJoin(target);
-    }
+    public Q leftJoin(EntityPath<?> target) {return queryMixin.leftJoin(target);}
 
     @Override
-    public <E> Q leftJoin(EntityPath<E> target, Path<E> alias) {
-        return queryMixin.leftJoin(target, alias);
-    }
+    public <E> Q leftJoin(EntityPath<E> target, Path<E> alias) {return queryMixin.leftJoin(target, alias);}
 
     @Override
-    public <E> Q leftJoin(RelationalFunctionCall<E> target, Path<E> alias) {
-        return queryMixin.leftJoin(target, alias);
-    }
+    public <E> Q leftJoin(RelationalFunctionCall<E> target, Path<E> alias) {return queryMixin.leftJoin(target, alias);}
 
     @Override
-    public Q leftJoin(SubQueryExpression<?> target, Path<?> alias) {
-        return queryMixin.leftJoin(target, alias);
-    }
+    public Q leftJoin(SubQueryExpression<?> target, Path<?> alias) {return queryMixin.leftJoin(target, alias);}
 
     @Override
     public <E> Q leftJoin(ForeignKey<E> key, RelationalPath<E> entity) {
-        return queryMixin
-                .leftJoin(entity)
-                .on(key.on(entity));
+        return queryMixin.leftJoin(entity).on(key.on(entity));
     }
 
     @Override
-    public Q rightJoin(EntityPath<?> target) {
-        return queryMixin.rightJoin(target);
-    }
+    public Q rightJoin(EntityPath<?> target) {return queryMixin.rightJoin(target);}
 
     @Override
-    public <E> Q rightJoin(EntityPath<E> target, Path<E> alias) {
-        return queryMixin.rightJoin(target, alias);
-    }
+    public <E> Q rightJoin(EntityPath<E> target, Path<E> alias) {return queryMixin.rightJoin(target, alias);}
 
     @Override
     public <E> Q rightJoin(RelationalFunctionCall<E> target, Path<E> alias) {
-        return queryMixin.rightJoin(target, alias);
+        return queryMixin.rightJoin(
+                target,
+                alias
+        );
     }
 
     @Override
-    public Q rightJoin(SubQueryExpression<?> target, Path<?> alias) {
-        return queryMixin.rightJoin(target, alias);
-    }
+    public Q rightJoin(SubQueryExpression<?> target, Path<?> alias) {return queryMixin.rightJoin(target, alias);}
 
     @Override
     public <E> Q rightJoin(ForeignKey<E> key, RelationalPath<E> entity) {
-        return queryMixin
-                .rightJoin(entity)
-                .on(key.on(entity));
+        return queryMixin.rightJoin(entity).on(key.on(entity));
     }
 
-    public Q on(Predicate condition) {
-        return queryMixin.on(condition);
-    }
+    public Q on(Predicate condition) {return queryMixin.on(condition);}
 
     @Override
-    public Q on(Predicate... conditions) {
-        return queryMixin.on(conditions);
-    }
+    public Q on(Predicate... conditions) {return queryMixin.on(conditions);}
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT> return type of the union
-     * @param sq   sub-queries
-     * @return union
+     * Creates an union expression for the given sub-queries     *     * @param <RT> return type of the union     * @param sq   sub-queries     * @return union
      */
-    public <RT> Union<RT> union(SubQueryExpression<RT>... sq) {
-        return innerUnion(sq);
-    }
+    public <RT> Union<RT> union(SubQueryExpression<RT>... sq) {return innerUnion(sq);}
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT> return type of the union
-     * @param sq   sub-queries
-     * @return union
+     * Creates an union expression for the given sub-queries     *     * @param <RT> return type of the union     * @param sq   sub-queries     * @return union
      */
-    public <RT> Union<RT> union(List<SubQueryExpression<RT>> sq) {
-        return innerUnion(sq);
-    }
+    public <RT> Union<RT> union(List<SubQueryExpression<RT>> sq) {return innerUnion(sq);}
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT>  return type of the union
-     * @param alias alias for union
-     * @param sq    sub-queries
-     * @return the current object
+     * Creates an union expression for the given sub-queries     *     * @param <RT>  return type of the union     * @param alias alias for union     * @param sq    sub-queries     * @return the current object
      */
     @SuppressWarnings("unchecked")
     public <RT> Q union(Path<?> alias, SubQueryExpression<RT>... sq) {
@@ -331,11 +239,7 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     }
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT> return type of the union
-     * @param sq   sub-queries
-     * @return union
+     * Creates an union expression for the given sub-queries     *     * @param <RT> return type of the union     * @param sq   sub-queries     * @return union
      */
     public <RT> Union<RT> unionAll(SubQueryExpression<RT>... sq) {
         unionAll = true;
@@ -343,11 +247,7 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     }
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT> return type of the union
-     * @param sq   sub-queries
-     * @return union
+     * Creates an union expression for the given sub-queries     *     * @param <RT> return type of the union     * @param sq   sub-queries     * @return union
      */
     public <RT> Union<RT> unionAll(List<SubQueryExpression<RT>> sq) {
         unionAll = true;
@@ -355,33 +255,24 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     }
 
     /**
-     * Creates an union expression for the given sub-queries
-     *
-     * @param <RT>  return type of the union
-     * @param alias alias for union
-     * @param sq    sub-queries
-     * @return the current object
+     * Creates an union expression for the given sub-queries     *     * @param <RT>  return type of the union     * @param alias alias for union     * @param sq    sub-queries     * @return the current object
      */
     @SuppressWarnings("unchecked")
-    public <RT> Q unionAll(Path<?> alias, SubQueryExpression<RT>... sq) {
-        return from(UnionUtils.union(ImmutableList.copyOf(sq), (Path) alias, true));
-    }
+    public <RT> Q unionAll(
+            Path<?> alias,
+            SubQueryExpression<RT>... sq
+    )
+    {return from(UnionUtils.union(ImmutableList.copyOf(sq), (Path) alias, true));}
 
     @SuppressWarnings("unchecked")
-    private <RT> Union<RT> innerUnion(SubQueryExpression<?>... sq) {
-        return innerUnion((List) ImmutableList.copyOf(sq));
-    }
+    private <RT> Union<RT> innerUnion(SubQueryExpression<?>... sq) {return innerUnion((List) ImmutableList.copyOf(sq));}
 
     private <RT> Union<RT> innerUnion(List<SubQueryExpression<RT>> sq) {
         queryMixin.setProjection(sq
                                          .get(0)
                                          .getMetadata()
                                          .getProjection());
-        if (!queryMixin
-                .getMetadata()
-                .getJoins()
-                .isEmpty())
-        {
+        if (!queryMixin.getMetadata().getJoins().isEmpty()) {
             throw new IllegalArgumentException("Don't mix union and from");
         }
         this.union = UnionUtils.union(sq, unionAll);
@@ -390,38 +281,62 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     }
 
     @Override
-    public Q withRecursive(Path<?> alias, SubQueryExpression<?> query) {
+    public Q withRecursive(
+            Path<?> alias,
+            SubQueryExpression<?> query
+    )
+    {
         queryMixin.addFlag(new QueryFlag(QueryFlag.Position.WITH, SQLTemplates.RECURSIVE));
         return with(alias, query);
     }
 
     @Override
-    public Q withRecursive(Path<?> alias, Expression<?> query) {
+    public Q withRecursive(
+            Path<?> alias,
+            Expression<?> query
+    )
+    {
         queryMixin.addFlag(new QueryFlag(QueryFlag.Position.WITH, SQLTemplates.RECURSIVE));
         return with(alias, query);
     }
 
     @Override
-    public WithBuilder<Q> withRecursive(Path<?> alias, Path<?>... columns) {
+    public WithBuilder<Q> withRecursive(
+            Path<?> alias,
+            Path<?>... columns
+    )
+    {
         queryMixin.addFlag(new QueryFlag(QueryFlag.Position.WITH, SQLTemplates.RECURSIVE));
         return with(alias, columns);
     }
 
     @Override
-    public Q with(Path<?> alias, SubQueryExpression<?> query) {
+    public Q with(
+            Path<?> alias,
+            SubQueryExpression<?> query
+    )
+    {
         Expression<?> expr = ExpressionUtils.operation(alias.getType(), SQLOps.WITH_ALIAS, alias, query);
         return queryMixin.addFlag(new QueryFlag(QueryFlag.Position.WITH, expr));
     }
 
     @Override
     public Q with(Path<?> alias, Expression<?> query) {
-        Expression<?> expr = ExpressionUtils.operation(alias.getType(), SQLOps.WITH_ALIAS, alias, query);
+        Expression<?> expr = ExpressionUtils.operation(
+                alias.getType(),
+                SQLOps.WITH_ALIAS,
+                alias,
+                query
+        );
         return queryMixin.addFlag(new QueryFlag(QueryFlag.Position.WITH, expr));
     }
 
     @Override
     public WithBuilder<Q> with(Path<?> alias, Path<?>... columns) {
-        Expression<?> columnsCombined = ExpressionUtils.list(Object.class, columns);
+        Expression<?> columnsCombined = ExpressionUtils.list(
+                Object.class,
+                columns
+        );
         Expression<?> aliasCombined = Expressions.operation(
                 alias.getType(),
                 SQLOps.WITH_COLUMNS,
@@ -446,14 +361,7 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
         Set<Path<?>> paths = Sets.newHashSet();
         for (Expression<?> e : exprs) {
             Path<?> path = e.accept(PathExtractor.DEFAULT, null);
-            if (path != null && !path
-                    .getMetadata()
-                    .isRoot())
-            {
-                paths.add(path
-                                  .getMetadata()
-                                  .getRootPath());
-            }
+            if (path != null && !path.getMetadata().isRoot()) {paths.add(path.getMetadata().getRootPath());}
         }
         return paths;
     }
@@ -462,74 +370,49 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     private Collection<? extends Expression<?>> expandProjection(Expression<?> expr) {
         if (expr instanceof FactoryExpression) {
             return ((FactoryExpression) expr).getArgs();
-        } else {
-            return ImmutableList.of(expr);
-        }
+        } else {return ImmutableList.of(expr);}
     }
 
     @SuppressWarnings("unchecked")
     protected SQLSerializer serialize(boolean forCountRow) {
         SQLSerializer serializer = createSerializer();
         if (union != null) {
-            if (queryMixin
-                    .getMetadata()
-                    .getProjection() == null ||
-                    expandProjection(queryMixin
-                                             .getMetadata()
-                                             .getProjection())
-                            .equals(expandProjection(firstUnionSubQuery
-                                                             .getMetadata()
-                                                             .getProjection())))
-            {
-                serializer.serializeUnion(union, queryMixin.getMetadata(), unionAll);
-            } else {
-                QueryMixin<Q> mixin2 = new QueryMixin<Q>(queryMixin
-                                                                 .getMetadata()
-                                                                 .clone());
-                Set<Path<?>> paths = getRootPaths(expandProjection(mixin2
-                                                                           .getMetadata()
-                                                                           .getProjection()));
+            if (queryMixin.getMetadata().getProjection() == null || expandProjection(queryMixin
+                                                                                             .getMetadata()
+                                                                                             .getProjection()).equals(
+                    expandProjection(firstUnionSubQuery.getMetadata().getProjection())))
+            {serializer.serializeUnion(union, queryMixin.getMetadata(), unionAll);} else {
+                QueryMixin<Q> mixin2 = new QueryMixin<Q>(queryMixin.getMetadata().clone());
+                Set<Path<?>>  paths  = getRootPaths(expandProjection(mixin2.getMetadata().getProjection()));
                 if (paths.isEmpty()) {
-                    mixin2.from(ExpressionUtils.as((Expression) union, defaultQueryAlias));
+                    mixin2.from(ExpressionUtils.as(
+                            (Expression) union,
+                            defaultQueryAlias
+                    ));
                 } else if (paths.size() == 1) {
                     mixin2.from(ExpressionUtils.as(
                             (Expression) union,
-                            paths
-                                    .iterator()
-                                    .next()
+                            paths.iterator().next()
                     ));
-                } else {
-                    throw new IllegalStateException("Unable to create serialize union");
-                }
+                } else {throw new IllegalStateException("Unable to create serialize union");}
                 serializer.serialize(mixin2.getMetadata(), forCountRow);
             }
-        } else {
-            serializer.serialize(queryMixin.getMetadata(), forCountRow);
-        }
+        } else {serializer.serialize(queryMixin.getMetadata(), forCountRow);}
         return serializer;
     }
 
     /**
-     * Get the query as an SQL query string and bindings
-     *
-     * @return SQL string and bindings
+     * Get the query as an SQL query string and bindings     *     * @return SQL string and bindings
      */
-    public SQLBindings getSQL() {
-        return getSQL(serialize(false));
-    }
+    public SQLBindings getSQL() {return getSQL(serialize(false));}
 
     protected SQLBindings getSQL(SQLSerializer serializer) {
         List<Object>                    args   = newArrayList();
         Map<ParamExpression<?>, Object> params = getMetadata().getParams();
         for (Object o : serializer.getConstants()) {
             if (o instanceof ParamExpression) {
-                if (!params.containsKey(o)) {
-                    throw new ParamNotSetException((ParamExpression<?>) o);
-                }
-                o = queryMixin
-                        .getMetadata()
-                        .getParams()
-                        .get(o);
+                if (!params.containsKey(o)) {throw new ParamNotSetException((ParamExpression<?>) o);}
+                o = queryMixin.getMetadata().getParams().get(o);
             }
             args.add(o);
         }
@@ -539,9 +422,7 @@ public abstract class ProjectableR2dbcQuery<T, Q extends ProjectableR2dbcQuery<T
     @Override
     public String toString() {
         SQLSerializer serializer = serialize(false);
-        return serializer
-                .toString()
-                .trim();
+        return serializer.toString().trim();
     }
 
 }

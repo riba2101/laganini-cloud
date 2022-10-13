@@ -1,8 +1,5 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.postgresql;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQuery;
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcQuery;
 import com.querydsl.core.QueryFlag;
 import com.querydsl.core.QueryFlag.Position;
 import com.querydsl.core.QueryMetadata;
@@ -11,6 +8,9 @@ import com.querydsl.core.types.ExpressionUtils;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.sql.Configuration;
 import com.querydsl.sql.RelationalPath;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.AbstractR2dbcQuery;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcQuery;
 
 /**
  * {@link PostgreSqlR2dbcQuery} provides PostgreSQL related extensions to {@link R2dbcQuery}

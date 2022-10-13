@@ -1,8 +1,8 @@
 package org.laganini.cloud.storage.connector.model;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.validation.Valid;
@@ -11,30 +11,30 @@ import java.util.Collection;
 import java.util.Collections;
 
 @Getter
-@Setter
 @ToString
 @EqualsAndHashCode
+@Builder
 public class Filter {
 
     @Valid
     @NotNull
-    private Collection<FilterCriteria<?>> filters;
+    private final Collection<FilterCriteria<?>> filters;
     @Valid
     @NotNull
-    private Collection<SortCriteria>      sorts;
+    private final Collection<SortCriteria>      sorts;
     @Valid
     @NotNull
-    private Pageable                      pageable;
+    private final Pageable                      pageable;
 
     public Filter() {
-        this(Collections.emptyList(), Collections.emptyList(), new Pageable(0, 100));
+        this(Collections.emptyList());
     }
 
     public Filter(
             Collection<FilterCriteria<?>> filters
     )
     {
-        this(filters, Collections.emptyList(), new Pageable(0, 100));
+        this(filters, Collections.emptyList());
     }
 
     public Filter(
@@ -42,7 +42,7 @@ public class Filter {
             Collection<SortCriteria> sorts
     )
     {
-        this(filters, sorts, new Pageable(0, 100));
+        this(filters, sorts, new Pageable());
     }
 
     public Filter(

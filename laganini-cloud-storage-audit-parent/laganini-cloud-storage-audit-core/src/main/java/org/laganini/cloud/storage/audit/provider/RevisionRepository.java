@@ -6,4 +6,5 @@ import org.springframework.data.repository.NoRepositoryBean;
 
 @NoRepositoryBean
 public interface RevisionRepository<T extends RevisionEntity> extends CrudRepository<T, String> {
+
 }

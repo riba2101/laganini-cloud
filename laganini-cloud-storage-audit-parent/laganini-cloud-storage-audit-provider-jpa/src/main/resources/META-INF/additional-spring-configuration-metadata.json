@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "laganini.storage.audit.async.thread-pool-count",
+      "type": "java.lang.Integer",
+      "description": "Number of threads for async persistence of auditing."
+    },
+    {
+      "name": "laganini.storage.audit.async.thread-pool-queue-size",
+      "type": "java.lang.Integer",
+      "description": "Number of queue size for async persistence of auditing."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 package test.repository;
 
-import org.laganini.cloud.storage.jpa.entity.AbstractIdEntity;
 import lombok.*;
+import org.laganini.cloud.storage.jpa.entity.AbstractIdEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

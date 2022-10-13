@@ -21,6 +21,7 @@
         <module>laganini-cloud-rmi-connector</module>
         <module>laganini-cloud-rmi-client</module>
         <module>laganini-cloud-rmi-service</module>
+        <module>laganini-cloud-rmi-test-suite</module>
     </modules>
 
     <dependencies>

@@ -1,7 +1,6 @@
 package org.laganini.cloud.storage.audit.provider.elasticsearch;
 
-import org.springframework.core.annotation.AliasFor;
-import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
 import java.lang.annotation.*;
 
@@ -9,10 +8,7 @@ import java.lang.annotation.*;
 @Inherited
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@EnableElasticsearchRepositories(basePackages = "org.laganini.cloud.storage.audit.provider.elasticsearch")
+@ImportAutoConfiguration({LaganiniStorageAuditElasticsearchAutoConfiguration.class})
 public @interface EnableLaganiniCloudStorageAuditElasticsearch {
-
-    @AliasFor(annotation = EnableElasticsearchRepositories.class, attribute = "elasticsearchTemplateRef")
-    String elasticsearchTemplateRef() default "elasticsearchTemplate";
 
 }

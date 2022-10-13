@@ -9,17 +9,17 @@ import org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity.E
 import org.laganini.cloud.storage.audit.service.RevisionEntryReactiveService;
 import org.laganini.cloud.storage.audit.service.RevisionReactiveService;
 import org.laganini.cloud.storage.audit.utils.AuditedUtils;
+import org.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.test.testcontainer.elasticsearch.ElasticsearchContextInitializer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.time.LocalDateTime;
 
-@SpringBootTest
-@ContextConfiguration(initializers = TestcontainersContextInitializer.class)
+@IntegrationTest(initializers = ElasticsearchContextInitializer.class)
 class ElasticsearchReactiveRevisionEntryServiceTest
         extends AbstractReactiveRevisionEntryServiceTest<ElasticsearchReactiveRevision, ElasticsearchReactiveRevisionEntry>
 {
+
     @Autowired
     private ElasticsearchReactiveRevisionRepository      revisionRepository;
     @Autowired

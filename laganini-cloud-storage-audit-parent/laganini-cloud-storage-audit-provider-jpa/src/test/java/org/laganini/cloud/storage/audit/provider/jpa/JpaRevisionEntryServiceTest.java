@@ -1,9 +1,9 @@
 package org.laganini.cloud.storage.audit.provider.jpa;
 
+import app.jpa.JpaAuditTestConfiguration;
 import org.laganini.cloud.storage.audit.dto.RevisionOperation;
 import org.laganini.cloud.storage.audit.provider.AbstractRevisionEntryServiceTest;
 import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
-import org.laganini.cloud.storage.audit.provider.TestcontainersContextInitializer;
 import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevision;
 import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
 import org.laganini.cloud.storage.audit.service.RevisionEntryService;
@@ -15,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import java.time.LocalDateTime;
 
 @IntegrationTest
-@ContextConfiguration(initializers = TestcontainersContextInitializer.class, classes = JpaAuditTestConfiguration.class)
+@ContextConfiguration(initializers = MariaDbAuditContextInitializer.class, classes = JpaAuditTestConfiguration.class)
 class JpaRevisionEntryServiceTest extends AbstractRevisionEntryServiceTest<JpaRevision, JpaRevisionEntry> {
 
     @Autowired

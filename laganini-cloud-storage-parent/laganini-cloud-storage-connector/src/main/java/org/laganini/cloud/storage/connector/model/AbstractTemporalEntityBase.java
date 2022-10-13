@@ -1,18 +1,22 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @Getter
-@Setter
 @ToString
 @EqualsAndHashCode
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class AbstractTemporalEntityBase {
 
-    private LocalDateTime createdAt;
-    private LocalDateTime modifiedAt;
+    private final LocalDateTime createdAt;
+    private final LocalDateTime modifiedAt;
+
+    protected AbstractTemporalEntityBase() {
+        this(null, null);
+    }
 
     protected AbstractTemporalEntityBase(LocalDateTime createdAt, LocalDateTime modifiedAt) {
         this.createdAt = createdAt;

@@ -1,20 +1,24 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @Getter
-@Setter
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class AbstractEntityBase<ID>
         extends AbstractTemporalEntityBase
         implements Fetchable<ID>
 {
 
-    private ID id;
+    private final ID id;
+
+    protected AbstractEntityBase() {
+        this(null, null, null);
+    }
 
     protected AbstractEntityBase(ID id, LocalDateTime createdAt, LocalDateTime modifiedAt) {
         super(createdAt, modifiedAt);

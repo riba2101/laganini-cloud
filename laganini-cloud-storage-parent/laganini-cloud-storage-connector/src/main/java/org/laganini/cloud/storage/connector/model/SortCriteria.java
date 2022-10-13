@@ -1,21 +1,25 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
-@Setter
 @ToString
 @EqualsAndHashCode
-@NoArgsConstructor
 public class SortCriteria {
 
     @NotBlank
-    private String    field;
+    private final String    field;
     @NotNull
-    private Direction direction;
+    private final Direction direction;
+
+    protected SortCriteria() {
+        this(null, null);
+    }
 
     public SortCriteria(
             String field,

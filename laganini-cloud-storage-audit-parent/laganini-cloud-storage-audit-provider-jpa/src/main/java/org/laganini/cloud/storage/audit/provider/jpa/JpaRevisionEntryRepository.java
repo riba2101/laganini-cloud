@@ -4,7 +4,7 @@ import org.laganini.cloud.storage.audit.provider.RevisionEntryRepository;
 import org.laganini.cloud.storage.audit.provider.jpa.entity.JpaRevisionEntry;
 import org.springframework.data.repository.CrudRepository;
 
-interface JpaRevisionEntryRepository
+public interface JpaRevisionEntryRepository
         extends CrudRepository<JpaRevisionEntry, String>, RevisionEntryRepository<JpaRevisionEntry>
 {
 }

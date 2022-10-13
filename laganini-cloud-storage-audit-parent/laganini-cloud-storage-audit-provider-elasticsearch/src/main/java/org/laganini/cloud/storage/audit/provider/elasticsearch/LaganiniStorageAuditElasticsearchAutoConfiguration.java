@@ -9,14 +9,33 @@ import org.laganini.cloud.storage.audit.provider.elasticsearch.converter.Elastic
 import org.laganini.cloud.storage.audit.provider.elasticsearch.converter.ElasticsearchRevisionEntryConverter;
 import org.laganini.cloud.storage.audit.service.RevisionEntryService;
 import org.laganini.cloud.storage.audit.service.RevisionService;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.repository.support.ElasticsearchRepositoryFactory;
 
 import java.time.Clock;
 
-@Configuration(proxyBeanMethods = false)
+@AutoConfiguration
 public class LaganiniStorageAuditElasticsearchAutoConfiguration extends AbstractLaganiniStorageAuditConfiguration {
+
+    @Bean
+    @ConditionalOnMissingBean
+    ElasticsearchRevisionRepository elasticsearchRevisionRepository(ElasticsearchOperations elasticsearchOperations) {
+        ElasticsearchRepositoryFactory elasticsearchRepositoryFactory = new ElasticsearchRepositoryFactory(
+                elasticsearchOperations);
+        return elasticsearchRepositoryFactory.getRepository(ElasticsearchRevisionRepository.class);
+
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    ElasticsearchRevisionEntryRepository elasticsearchRevisionEntryRepository(ElasticsearchOperations elasticsearchOperations) {
+        ElasticsearchRepositoryFactory elasticsearchRepositoryFactory = new ElasticsearchRepositoryFactory(
+                elasticsearchOperations);
+        return elasticsearchRepositoryFactory.getRepository(ElasticsearchRevisionEntryRepository.class);
+    }
 
     @Bean
     @ConditionalOnMissingBean

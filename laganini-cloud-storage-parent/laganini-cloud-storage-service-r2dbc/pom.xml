@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,9 +12,8 @@
     <artifactId>laganini-cloud-storage-service-r2dbc</artifactId>
 
     <properties>
-        <querydsl.version>4.3.1</querydsl.version>
-        <r2dbc-pool.version>0.8.2.RELEASE</r2dbc-pool.version>
-        <r2dbc-mariadb.version>0.8.2-alpha2</r2dbc-mariadb.version>
+        <r2dbc-pool.version>1.0.0.RC1</r2dbc-pool.version>
+        <r2dbc-mariadb.version>1.1.2</r2dbc-mariadb.version>
     </properties>
 
     <dependencies>
@@ -44,25 +44,9 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-sql</artifactId>
-            <version>${querydsl.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>joda-time</groupId>
-                    <artifactId>joda-time</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- Flyway -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.laganini.cloud.storage</groupId>
             <artifactId>laganini-cloud-storage-connector</artifactId>
@@ -75,8 +59,24 @@
         </dependency>
 
         <dependency>
-            <groupId>org.laganini.cloud.test</groupId>
-            <artifactId>laganini-cloud-test-suite</artifactId>
+            <groupId>org.laganini.cloud.storage</groupId>
+            <artifactId>laganini-cloud-storage-service-r2dbc-test-suite</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jdbc</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

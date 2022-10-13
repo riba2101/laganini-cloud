@@ -1,9 +1,9 @@
 package org.laganini.cloud.storage.audit.aop;
 
-import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
 
 @Aspect
 public class AuditedJpaRepositoryAspect {
@@ -20,10 +20,10 @@ public class AuditedJpaRepositoryAspect {
         handler.onSave(pjp, responseEntity);
     }
 
-    @AfterReturning(
-            "execution(public * deleteInBatch(..)) && this(org.springframework.data.jpa.repository.JpaRepository)")
+    @AfterReturning(value = "execution(public * deleteInBatch(..)) && this(org.springframework.data.jpa.repository.JpaRepository)")
     public void onDeleteInBatchExecuted(JoinPoint pjp) {
         handler.onDelete(pjp);
     }
 
+    //TODO extend to other methods
 }

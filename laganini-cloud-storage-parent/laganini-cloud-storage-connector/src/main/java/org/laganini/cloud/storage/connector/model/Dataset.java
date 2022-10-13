@@ -1,20 +1,27 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 import java.util.Collection;
+import java.util.Collections;
 
 @Getter
-@Setter
 @ToString
 @EqualsAndHashCode
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@SuperBuilder
 public class Dataset<T> {
 
-    private Collection<T> data;
-    private long          count;
-    private int           page;
-    private int           pageSize;
+    private final Collection<T> data;
+    private final long          count;
+    private final int           page;
+    private final int           pageSize;
+
+    protected Dataset() {
+        this(Collections.emptyList(), 0, 0, 0);
+    }
 
     public Dataset(Collection<T> data, long count, int page, int pageSize) {
         this.data = data;

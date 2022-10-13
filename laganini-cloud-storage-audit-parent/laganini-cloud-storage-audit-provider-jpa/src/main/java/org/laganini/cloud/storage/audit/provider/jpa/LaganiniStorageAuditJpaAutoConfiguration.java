@@ -10,19 +10,26 @@ import org.laganini.cloud.storage.audit.provider.jpa.converter.JpaRevisionConver
 import org.laganini.cloud.storage.audit.provider.jpa.converter.JpaRevisionEntryConverter;
 import org.laganini.cloud.storage.audit.service.RevisionEntryService;
 import org.laganini.cloud.storage.audit.service.RevisionService;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import java.time.Clock;
 
-@Configuration(proxyBeanMethods = false)
+@AutoConfiguration
+@AutoConfigureAfter(LaganiniStorageAuditJpaProviderAutoConfiguration.class)
 public class LaganiniStorageAuditJpaAutoConfiguration extends AbstractLaganiniStorageAuditConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    RevisionService jpaRevisionService(JpaRevisionRepository repository) {
-        return new JpaRevisionService(repository, new JpaRevisionConverter());
+    RevisionService jpaRevisionService(JpaRevisionRepository repository, PlatformTransactionManager auditTransactionManager) {
+        return new JpaRevisionService(
+                repository,
+                new JpaRevisionConverter()/*,
+                auditTransactionManager*/
+        );
     }
 
     @Bean

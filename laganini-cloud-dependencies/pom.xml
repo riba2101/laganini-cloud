@@ -96,6 +96,11 @@
                 <artifactId>laganini-cloud-rmi-service</artifactId>
                 <version>${laganini-cloud-rmi.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.laganini.cloud.rmi</groupId>
+                <artifactId>laganini-cloud-rmi-test-suite</artifactId>
+                <version>${laganini-cloud-rmi.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.laganini.cloud.metrics</groupId>
@@ -133,7 +138,17 @@
             </dependency>
             <dependency>
                 <groupId>org.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-elasticsearch-test-suite</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.laganini.cloud.storage</groupId>
                 <artifactId>laganini-cloud-storage-service-jpa</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-jpa-test-suite</artifactId>
                 <version>${laganini-cloud-storage.version}</version>
             </dependency>
             <dependency>
@@ -143,10 +158,14 @@
             </dependency>
             <dependency>
                 <groupId>org.laganini.cloud.storage</groupId>
+                <artifactId>laganini-cloud-storage-service-r2dbc-test-suite</artifactId>
+                <version>${laganini-cloud-storage.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.laganini.cloud.storage</groupId>
                 <artifactId>laganini-cloud-storage-service-test-suite</artifactId>
                 <version>${laganini-cloud-storage.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.laganini.cloud.storage.audit</groupId>
                 <artifactId>laganini-cloud-storage-audit-provider-elasticsearch</artifactId>

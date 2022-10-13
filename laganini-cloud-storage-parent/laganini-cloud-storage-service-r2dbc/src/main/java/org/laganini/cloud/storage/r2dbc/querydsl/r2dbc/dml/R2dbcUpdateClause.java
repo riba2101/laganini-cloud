@@ -1,8 +1,8 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.dml;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
 import com.querydsl.sql.Configuration;
 import com.querydsl.sql.RelationalPath;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
 
 /**
  * Defines an UPDATE clause.

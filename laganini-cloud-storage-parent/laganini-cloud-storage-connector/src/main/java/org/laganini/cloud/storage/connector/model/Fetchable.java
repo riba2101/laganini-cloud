@@ -4,6 +4,4 @@ public interface Fetchable<ID> {
 
     ID getId();
 
-    void setId(ID id);
-
 }

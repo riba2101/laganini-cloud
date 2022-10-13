@@ -1,7 +1,7 @@
 package org.laganini.cloud.storage.audit.utils;
 
-import org.laganini.cloud.storage.audit.annotation.Audited;
 import lombok.extern.slf4j.Slf4j;
+import org.laganini.cloud.storage.audit.annotation.Audited;
 
 @Slf4j
 public class AuditedUtils {

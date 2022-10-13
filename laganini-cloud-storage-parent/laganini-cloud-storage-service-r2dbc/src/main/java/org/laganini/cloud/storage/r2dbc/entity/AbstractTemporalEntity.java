@@ -1,8 +1,8 @@
 package org.laganini.cloud.storage.r2dbc.entity;
 
-import org.laganini.cloud.storage.entity.TemporalEntity;
 import lombok.Getter;
 import lombok.Setter;
+import org.laganini.cloud.storage.entity.TemporalEntity;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 

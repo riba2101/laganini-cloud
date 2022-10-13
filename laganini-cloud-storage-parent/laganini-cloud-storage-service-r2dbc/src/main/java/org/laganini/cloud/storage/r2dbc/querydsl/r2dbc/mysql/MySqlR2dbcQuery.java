@@ -1,7 +1,5 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.mysql;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
-import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcQuery;
 import com.querydsl.core.DefaultQueryMetadata;
 import com.querydsl.core.QueryMetadata;
 import com.querydsl.core.Tuple;
@@ -9,6 +7,8 @@ import com.querydsl.core.types.Expression;
 import com.querydsl.sql.Configuration;
 import com.querydsl.sql.MySQLTemplates;
 import com.querydsl.sql.SQLTemplates;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcConnectionProvider;
+import org.laganini.cloud.storage.r2dbc.querydsl.r2dbc.R2dbcQuery;
 
 /**
  * {@link MySqlR2dbcQuery} provides MySQL related extensions to {@link R2dbcQuery}.

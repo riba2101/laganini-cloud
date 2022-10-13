@@ -1,14 +1,12 @@
 package org.laganini.cloud.storage.audit.provider.jpa.entity;
 
-import org.laganini.cloud.storage.audit.dto.RevisionOperation;
-import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.laganini.cloud.storage.audit.dto.RevisionOperation;
+import org.laganini.cloud.storage.audit.entity.RevisionEntryEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
@@ -21,6 +19,7 @@ public class JpaRevisionEntry implements RevisionEntryEntity {
     @Id
     private String            id;
     private long              version;
+    @Column(name = "revision_id")
     private String            revisionId;
     private RevisionOperation operation;
     private String            author;

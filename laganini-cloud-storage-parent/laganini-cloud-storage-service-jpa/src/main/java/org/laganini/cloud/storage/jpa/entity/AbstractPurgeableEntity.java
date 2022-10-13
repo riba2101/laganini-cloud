@@ -1,7 +1,7 @@
 package org.laganini.cloud.storage.jpa.entity;
 
-import org.laganini.cloud.storage.entity.PurgeableEntity;
 import lombok.*;
+import org.laganini.cloud.storage.entity.PurgeableEntity;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -14,15 +14,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @MappedSuperclass
 public abstract class AbstractPurgeableEntity<ID>
-        extends AbstractOwnedEntity<ID>
+        extends AbstractIdEntity<ID>
         implements PurgeableEntity<ID>
 {
 
     @Column
     private LocalDateTime deletedAt;
-
-    public AbstractPurgeableEntity(Long ownerId) {
-        super(ownerId);
-    }
 
 }

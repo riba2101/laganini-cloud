@@ -1,11 +1,11 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.corereactive.support;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 import com.querydsl.core.FetchableQuery;
 import com.querydsl.core.ResultTransformer;
 import com.querydsl.core.support.QueryBase;
 import com.querydsl.core.support.QueryMixin;
 import com.querydsl.core.types.SubQueryExpression;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 import reactor.core.publisher.Mono;
 
 /**

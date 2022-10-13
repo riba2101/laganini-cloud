@@ -1,11 +1,7 @@
 package org.laganini.cloud.storage.entity;
 
-public interface OwnedEntity<ID>
-        extends IdentityEntity<ID>
-{
+public interface OwnedEntity<OWNER_ID> {
 
-    Long getOwnerId();
-
-    void setOwnerId(Long ownerId);
+    OwnerReference<OWNER_ID> getOwner();
 
 }

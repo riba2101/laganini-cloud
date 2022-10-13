@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.jpa.entity;
 
-import org.laganini.cloud.storage.entity.IdentityEntity;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.laganini.cloud.storage.entity.IdentityEntity;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.MappedSuperclass;

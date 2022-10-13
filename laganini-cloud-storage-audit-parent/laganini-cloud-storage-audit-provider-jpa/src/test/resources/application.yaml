@@ -7,5 +7,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDB103Dialect
 
-  flyway:
-    baseline-on-migrate: true
+laganini:
+  storage:
+    audit:
+      async:
+        thread-pool-count: 10
+        thread-pool-queue-size: 100
+      jpa:
+        #datasource:
+          #done in the context initializer

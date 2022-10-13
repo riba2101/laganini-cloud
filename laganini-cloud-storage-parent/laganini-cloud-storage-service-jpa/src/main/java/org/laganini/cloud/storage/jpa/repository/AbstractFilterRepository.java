@@ -1,10 +1,5 @@
 package org.laganini.cloud.storage.jpa.repository;
 
-import org.laganini.cloud.storage.connector.model.Operator;
-import org.laganini.cloud.storage.connector.model.*;
-import org.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
-import org.laganini.cloud.storage.repository.FilterRepository;
-import org.laganini.cloud.storage.support.DateTimeService;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.types.*;
 import com.querydsl.core.types.dsl.Expressions;
@@ -13,6 +8,11 @@ import com.querydsl.core.types.dsl.StringExpression;
 import com.querydsl.core.types.dsl.TemporalExpression;
 import com.querydsl.core.util.MathUtils;
 import com.querydsl.jpa.impl.JPAQuery;
+import org.laganini.cloud.storage.connector.model.Operator;
+import org.laganini.cloud.storage.connector.model.*;
+import org.laganini.cloud.storage.filter.AbstractSearchCriteriaMapper;
+import org.laganini.cloud.storage.repository.FilterRepository;
+import org.laganini.cloud.storage.support.DateTimeService;
 import org.springframework.data.repository.NoRepositoryBean;
 
 import java.time.temporal.Temporal;
@@ -78,7 +78,7 @@ public abstract class AbstractFilterRepository<ENTITY>
 
         if (pageSize > 0) {
             if (page > 0) {
-                query.offset(page * (long) pageSize);
+                query.offset((page - 1) * (long) pageSize);
             }
             query.limit(pageSize);
         }

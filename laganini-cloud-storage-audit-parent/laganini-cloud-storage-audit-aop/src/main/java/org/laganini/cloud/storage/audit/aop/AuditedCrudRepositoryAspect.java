@@ -1,9 +1,9 @@
 package org.laganini.cloud.storage.audit.aop;
 
-import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
+import org.laganini.cloud.storage.audit.aop.handler.AuditedRepositoryJoinPointHandler;
 
 @Aspect
 public class AuditedCrudRepositoryAspect {
@@ -41,4 +41,5 @@ public class AuditedCrudRepositoryAspect {
         handler.onSave(pjp, responseEntity);
     }
 
+    //TODO extend to other methods
 }

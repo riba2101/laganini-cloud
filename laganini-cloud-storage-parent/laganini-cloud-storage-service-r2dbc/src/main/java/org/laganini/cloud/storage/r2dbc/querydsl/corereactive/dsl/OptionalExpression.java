@@ -1,8 +1,8 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl;
 
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.Visitor;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.Fetchable;
 
 import javax.annotation.Nullable;
 import java.util.Objects;

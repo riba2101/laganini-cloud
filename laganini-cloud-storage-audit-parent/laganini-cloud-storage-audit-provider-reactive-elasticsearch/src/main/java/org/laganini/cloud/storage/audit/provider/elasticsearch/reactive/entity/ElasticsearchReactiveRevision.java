@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.audit.provider.elasticsearch.reactive.entity;
 
-import org.laganini.cloud.storage.audit.entity.RevisionEntity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.laganini.cloud.storage.audit.entity.RevisionEntity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 

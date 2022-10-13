@@ -1,7 +1,6 @@
 package org.laganini.cloud.storage.r2dbc.querydsl.r2dbc;
 
 import com.google.common.collect.Lists;
-import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
 import com.querydsl.core.DefaultQueryMetadata;
 import com.querydsl.core.QueryException;
 import com.querydsl.core.QueryFlag;
@@ -17,6 +16,7 @@ import com.querydsl.sql.Configuration;
 import com.querydsl.sql.SQLSerializer;
 import com.querydsl.sql.SQLTemplates;
 import io.r2dbc.spi.*;
+import org.laganini.cloud.storage.r2dbc.querydsl.corereactive.dsl.OptionalExpression;
 import org.mariadb.r2dbc.message.server.ColumnDefinitionPacket;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -232,7 +232,7 @@ public abstract class AbstractR2dbcQuery<T, Q extends AbstractR2dbcQuery<T, Q>>
             args[i] = row.get(
                     i,
                     Objects.requireNonNull(
-                            ((ColumnDefinitionPacket) columnMetadata.getNativeTypeMetadata()).getJavaClass(),
+                            ((ColumnDefinitionPacket) columnMetadata.getNativeTypeMetadata()).getJavaType(),
                             "Unknown Java typeInfo"
                     )
             );

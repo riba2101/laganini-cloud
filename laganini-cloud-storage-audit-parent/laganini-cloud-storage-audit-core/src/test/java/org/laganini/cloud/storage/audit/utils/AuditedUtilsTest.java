@@ -1,10 +1,10 @@
 package org.laganini.cloud.storage.audit.utils;
 
-import org.laganini.cloud.storage.audit.annotation.Audited;
 import lombok.Getter;
 import lombok.Setter;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.laganini.cloud.storage.audit.annotation.Audited;
 
 class AuditedUtilsTest {
 

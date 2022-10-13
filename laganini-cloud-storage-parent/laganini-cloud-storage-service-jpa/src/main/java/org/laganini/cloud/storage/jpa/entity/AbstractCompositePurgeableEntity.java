@@ -1,7 +1,7 @@
 package org.laganini.cloud.storage.jpa.entity;
 
-import org.laganini.cloud.storage.entity.PurgeableEntity;
 import lombok.*;
+import org.laganini.cloud.storage.entity.PurgeableEntity;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

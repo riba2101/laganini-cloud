@@ -15,44 +15,33 @@ import java.util.Optional;
 @Timed
 @RestController
 @RequestMapping(path = TestController.PATH)
-record TestController(TestRepository testRepository) implements TestEndpoint {
+record TestController() implements TestEndpoint {
 
     @Validated
     @Override
     public List<TestBody> getAll() {
-        return testRepository
-                .findAll()
-                .stream()
-                .map(this::from)
-                .toList();
+        return List.of(
+                new TestBody(1L, "name1"),
+                new TestBody(2L, "name2")
+        );
     }
 
     @Validated
     @Override
     public Optional<TestBody> getById(@PathVariable @NotNull Long id) {
-        Optional<TestEntity> testEntity = testRepository.findById(id);
-        return testEntity.map(this::from);
+        return Optional.of(new TestBody(id, "name" + id));
     }
 
     @Validated
     @Override
     public TestBody create(@RequestBody @Valid @NotNull TestBody testBody) {
-        testBody.setName(null);
-        return from(testRepository.save(to(testBody)));
+        return testBody;
     }
 
     @Validated
     @Override
     public TestBody update(@PathVariable @NotNull Long id, @RequestBody @Valid @NotNull TestBody testBody) {
-        return from(testRepository.save(to(testBody)));
-    }
-
-    private TestBody from(TestEntity entity) {
-        return new TestBody(entity.getId(), entity.getName());
-    }
-
-    private TestEntity to(TestBody body) {
-        return new TestEntity(body.getId(), body.getName());
+        return testBody;
     }
 
 }

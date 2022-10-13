@@ -1,16 +1,14 @@
 package org.laganini.cloud.storage.audit.provider.jpa.entity;
 
+import lombok.*;
 import org.laganini.cloud.storage.audit.entity.RevisionEntity;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Getter
+@Setter(AccessLevel.PROTECTED)
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "revision")

@@ -1,18 +1,22 @@
 package org.laganini.cloud.storage.connector.model;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 @Getter
-@Setter
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class AbstractPurgeableContext<ID>
-        extends AbstractOwnedContext<ID>
+        extends AbstractEntityBaseContext<ID>
 {
 
-    protected AbstractPurgeableContext(ID id, Long ownerId) {
-        super(id, ownerId);
+    public AbstractPurgeableContext() {
+        this(null);
+    }
+
+    protected AbstractPurgeableContext(ID id) {
+        super(id);
     }
 
 }
