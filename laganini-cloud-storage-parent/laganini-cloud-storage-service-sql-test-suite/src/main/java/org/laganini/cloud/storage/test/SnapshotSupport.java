@@ -13,14 +13,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 @Getter
 class SnapshotSupport {
 
-    public static final String                        DEFAULT_DATABASE_SNAPSHOT_FS_PATH        = "src/test/resources/db";
-    public static final String                        DEFAULT_DATABASE_SNAPSHOT_FS_NAME        = "database-snapshot.sql";
-    public static final String                        DEFAULT_DATABASE_SNAPSHOT_CONTAINER_NAME = "/database-snapshot.sql";
-    public static final SnapshotSupport.Configuration DEFAULT                                  = new Configuration(
-            false,
-            DEFAULT_DATABASE_SNAPSHOT_FS_PATH,
-            DEFAULT_DATABASE_SNAPSHOT_FS_NAME
-    );
+    public static final String DEFAULT_DATABASE_SNAPSHOT_FS_PATH        = "src/test/resources/db";
+    public static final String DEFAULT_DATABASE_SNAPSHOT_FS_NAME        = "database-snapshot.sql";
+    public static final String DEFAULT_DATABASE_SNAPSHOT_CONTAINER_NAME = "/database-snapshot.sql";
 
     public static final String TEST_SUPPORT_FEATURE_DB_SNAPSHOT     = "test.feature.db.snapshot";
     public static final String TEST_SUPPORT_FEATURE_DB_SNAPSHOT_RUN = "test.feature.db.snapshot.run";
@@ -30,7 +25,7 @@ class SnapshotSupport {
     private final SnapshotSupport.Configuration configuration;
 
     public SnapshotSupport() {
-        this(DEFAULT);
+        this(Configuration.builder().build());
     }
 
     public SnapshotSupport(Configuration configuration) {

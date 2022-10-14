@@ -59,7 +59,7 @@
         <module>laganini-cloud-metrics-parent</module>
         <module>laganini-cloud-rmi-parent</module>
         <module>laganini-cloud-storage-parent</module>
-        <module>laganini-cloud-storage-audit-parent</module>
+<!--        <module>laganini-cloud-storage-audit-parent</module>-->
     </modules>
 
     <build>

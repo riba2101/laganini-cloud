@@ -21,7 +21,7 @@ public class MariaDBContainer
     }
 
     public MariaDBContainer(String dockerImageName) {
-        this(dockerImageName, SnapshotSupport.DEFAULT);
+        this(dockerImageName, SnapshotSupport.Configuration.builder().build());
     }
 
     public MariaDBContainer(SnapshotSupport.Configuration snapshotSupportConfiguration) {

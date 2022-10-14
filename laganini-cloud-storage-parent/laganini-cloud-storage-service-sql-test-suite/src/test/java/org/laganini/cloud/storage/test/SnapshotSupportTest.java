@@ -9,14 +9,13 @@ import org.laganini.cloud.test.suite.UnitTest;
 @UnitTest
 class SnapshotSupportTest {
 
-    private SnapshotSupport snapshotSupport = new SnapshotSupport();
-
     @Nested
     class WithoutSupport {
 
         @Test
         void shouldNotRun() {
-            boolean shouldRun = snapshotSupport.shouldRun();
+            SnapshotSupport snapshotSupport = new SnapshotSupport();
+            boolean         shouldRun       = snapshotSupport.shouldRun();
 
             Assertions.assertThat(shouldRun).isFalse();
         }
@@ -32,7 +31,8 @@ class SnapshotSupportTest {
 
             @Test
             void shouldNotRun() {
-                boolean shouldRun = snapshotSupport.shouldRun();
+                SnapshotSupport snapshotSupport = new SnapshotSupport();
+                boolean         shouldRun       = snapshotSupport.shouldRun();
 
                 Assertions.assertThat(shouldRun).isFalse();
             }
@@ -45,7 +45,8 @@ class SnapshotSupportTest {
 
             @Test
             void shouldRun() {
-                boolean shouldRun = snapshotSupport.shouldRun();
+                SnapshotSupport snapshotSupport = new SnapshotSupport();
+                boolean         shouldRun       = snapshotSupport.shouldRun();
 
                 Assertions.assertThat(shouldRun).isTrue();
             }
