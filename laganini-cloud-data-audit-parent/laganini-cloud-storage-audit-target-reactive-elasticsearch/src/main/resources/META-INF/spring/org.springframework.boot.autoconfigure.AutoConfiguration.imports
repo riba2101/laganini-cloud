@@ -1,0 +1,2 @@
+org.laganini.cloud.data.audit.target.elasticsearch.reactive.LaganiniStorageAuditElasticsearchStorageAutoConfiguration
+org.laganini.cloud.data.audit.target.elasticsearch.reactive.LaganiniStorageAuditElasticsearchAutoConfiguration

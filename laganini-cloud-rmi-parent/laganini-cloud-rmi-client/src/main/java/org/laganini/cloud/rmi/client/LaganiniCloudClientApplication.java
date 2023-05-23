@@ -2,10 +2,10 @@ package org.laganini.cloud.rmi.client;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.reactive.config.EnableWebFlux;
-import reactivefeign.spring.config.EnableReactiveFeignClients;
 
 import java.lang.annotation.*;
 
@@ -14,12 +14,12 @@ import java.lang.annotation.*;
 @Documented
 @Inherited
 @EnableWebFlux
-@EnableReactiveFeignClients
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
 public @interface LaganiniCloudClientApplication {
 
-    @AliasFor(annotation = EnableReactiveFeignClients.class, attribute = "basePackages")
+    @AliasFor(annotation = EnableFeignClients.class, attribute = "basePackages")
     String[] basePackages() default {};
 
     @AliasFor(annotation = ComponentScan.class, attribute = "basePackages")

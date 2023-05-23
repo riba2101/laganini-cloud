@@ -3,19 +3,22 @@ package org.laganini.cloud.rmi.client;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.http.codec.ServerCodecConfigurer;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import org.springframework.web.reactive.config.ResourceHandlerRegistry;
-import org.springframework.web.reactive.config.WebFluxConfigurer;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+@ConditionalOnClass({WebMvcConfigurer.class})
+@ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
 @ConditionalOnProperty(prefix = "rmi", name = "enabled", matchIfMissing = true)
 @Configuration(proxyBeanMethods = false)
-public class LaganiniRmiAutoConfiguration implements WebFluxConfigurer {
+public class LaganiniRmiAutoConfiguration implements WebMvcConfigurer {
 
     @Bean
     @ConditionalOnMissingBean
@@ -36,8 +39,4 @@ public class LaganiniRmiAutoConfiguration implements WebFluxConfigurer {
                 .resourceChain(false);
     }
 
-    @Override
-    public void configureHttpMessageCodecs(ServerCodecConfigurer configurer) {
-        configurer.defaultCodecs().maxInMemorySize(-1);
-    }
 }

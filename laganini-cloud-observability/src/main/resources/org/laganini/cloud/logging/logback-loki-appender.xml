@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <appender name="LOKI" class="com.github.loki4j.logback.Loki4jAppender">
+        <http>
+            <url>${LOKI_URL}</url>
+        </http>
+
+        <format>
+            <label>
+                <pattern>app=${APPLICATION},host=${HOSTNAME},environment=${ENVIRONMENT},traceID=%X{traceId:-NONE},level=%level</pattern>
+            </label>
+            <message>
+                <pattern>${FILE_LOG_PATTERN}</pattern>
+            </message>
+            <sortByTime>true</sortByTime>
+        </format>
+    </appender>
+
+    <appender name="ASYNC_LOKI" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="LOKI"/>
+    </appender>
+</included>
+
+

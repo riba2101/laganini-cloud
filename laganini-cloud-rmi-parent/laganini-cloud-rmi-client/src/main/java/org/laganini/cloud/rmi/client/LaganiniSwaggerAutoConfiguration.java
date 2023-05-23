@@ -2,10 +2,9 @@ package org.laganini.cloud.rmi.client;
 
 import brave.baggage.BaggageField;
 import brave.http.HttpRequestParser;
-import org.laganini.cloud.common.SpanConstants;
+import org.laganini.cloud.observability.SpanConstants;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.info.BuildProperties;
-import org.springframework.cloud.sleuth.instrument.web.HttpServerRequestParser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -51,7 +50,8 @@ public class LaganiniSwaggerAutoConfiguration {
                 .build();
     }
 
-    @Bean(name = HttpServerRequestParser.NAME)
+    //TODO
+//    @Bean(name = HttpServerRequestParser.NAME)
     @ConditionalOnMissingBean
     HttpRequestParser myHttpRequestParser() {
         return (request, context, span) -> {

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.laganini.cloud.data</groupId>
+        <artifactId>laganini-cloud-data-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>laganini-cloud-data-r2dbc</artifactId>
+
+    <properties>
+        <querydsl.version>5.0.0</querydsl.version>
+
+        <infobip-querydsl.version>8.1.2</infobip-querydsl.version>
+
+        <r2dbc-mariadb.version>1.1.2</r2dbc-mariadb.version>
+    </properties>
+
+    <dependencies>
+        <!-- r2dbc + querydsl -->
+        <dependency>
+            <groupId>com.infobip</groupId>
+            <artifactId>infobip-spring-data-r2dbc-querydsl-boot-starter</artifactId>
+            <version>${infobip-querydsl.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.infobip</groupId>
+                    <artifactId>infobip-spring-data-jdbc-annotation-processor</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.laganini.cloud.data</groupId>
+            <artifactId>laganini-cloud-data-r2dbc-codegen</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mariadb</groupId>
+            <artifactId>r2dbc-mariadb</artifactId>
+            <version>${r2dbc-mariadb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.r2dbc</groupId>
+            <artifactId>r2dbc-pool</artifactId>
+        </dependency>
+
+        <!-- Flyway -->
+        <dependency>
+            <groupId>org.laganini.cloud.data</groupId>
+            <artifactId>laganini-cloud-data</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.laganini.cloud.data</groupId>
+            <artifactId>laganini-cloud-data-r2dbc-test-suite</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jdbc</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.mysema.maven</groupId>
+                <artifactId>apt-maven-plugin</artifactId>
+                <!--                <version>${apt.maven.plugin.version}</version>-->
+                <executions>
+<!--                    <execution>-->
+<!--                        <id>generate-source-entities</id>-->
+<!--                        <phase>generate-sources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>process</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>-->
+<!--                            <processor>org.laganini.cloud.data.r2dbc.processor.SpringDataJdbcAnnotationProcessor-->
+<!--                            </processor>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+                    <execution>
+                        <id>generate-test-entities</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>test-process</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/generated-test-sources</outputDirectory>
+                            <processor>org.laganini.cloud.data.r2dbc.processor.SpringDataJdbcAnnotationProcessor
+                            </processor>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

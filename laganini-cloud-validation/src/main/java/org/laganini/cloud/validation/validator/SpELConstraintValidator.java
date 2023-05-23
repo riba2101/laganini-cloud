@@ -4,13 +4,13 @@ import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
 
 public class SpELConstraintValidator implements ConstraintValidator<SpEL, Object> {
 
-    private String expression;
-    private ExpressionParser parser = new SpelExpressionParser();
+    private       String           expression;
+    private final ExpressionParser parser = new SpelExpressionParser();
 
     public void initialize(SpEL constraintAnnotation) {
         expression = constraintAnnotation.value();

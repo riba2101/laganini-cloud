@@ -1,5 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.laganini.cloud.rmi.client.LaganiniCircuitBreakerAutoConfiguration,\
-org.laganini.cloud.rmi.client.LaganiniFeignClientAutoConfiguration,\
-org.laganini.cloud.rmi.client.LaganiniRmiAutoConfiguration,\
-org.laganini.cloud.rmi.client.LaganiniSwaggerAutoConfiguration

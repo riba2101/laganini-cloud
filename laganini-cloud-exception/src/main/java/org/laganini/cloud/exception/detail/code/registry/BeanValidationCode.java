@@ -2,7 +2,7 @@ package org.laganini.cloud.exception.detail.code.registry;
 
 import lombok.Getter;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 
 public enum BeanValidationCode {
 

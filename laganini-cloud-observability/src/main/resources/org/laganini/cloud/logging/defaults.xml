@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <springProperty scope="context" name="APPLICATION" source="spring.application.name"/>
+    <springProperty scope="context" name="ENVIRONMENT" source="org.laganini.cloud.observability.logging.environment" defaultValue="development"/>
+
+    <springProperty scope="context" name="FLUENTD_HOST" source="org.laganini.cloud.observability.logging.fluentd.host" defaultValue="localhost"/>
+    <springProperty scope="context" name="FLUENTD_PORT" source="org.laganini.cloud.observability.logging.fluentd.port" defaultValue="24224"/>
+
+    <springProperty scope="context" name="LOGSTASH_HOST" source="org.laganini.cloud.observability.logging.logstash.host" defaultValue="localhost"/>
+    <springProperty scope="context" name="LOGSTASH_PORT" source="org.laganini.cloud.observability.logging.logstash.port" defaultValue="5000"/>
+
+    <springProperty scope="context" name="LOKI_URL" source="org.laganini.cloud.observability.logging.loki.url" defaultValue="http://localhost:3100/loki/api/v1/push"/>
+</included>

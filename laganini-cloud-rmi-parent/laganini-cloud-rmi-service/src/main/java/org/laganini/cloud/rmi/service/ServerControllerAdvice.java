@@ -1,14 +1,16 @@
 package org.laganini.cloud.rmi.service;
 
+import io.github.resilience4j.bulkhead.BulkheadFullException;
+import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
+import jakarta.persistence.RollbackException;
+import jakarta.validation.ConstraintViolationException;
+import lombok.extern.slf4j.Slf4j;
 import org.laganini.cloud.exception.BusinessException;
 import org.laganini.cloud.exception.BusinessExceptionResponse;
 import org.laganini.cloud.exception.ExceptionType;
 import org.laganini.cloud.exception.detail.AbstractExceptionDetail;
 import org.laganini.cloud.exception.detail.FieldExceptionDetail;
 import org.laganini.cloud.exception.detail.GlobalExceptionDetail;
-import io.github.resilience4j.bulkhead.BulkheadFullException;
-import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.circuitbreaker.NoFallbackAvailableException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,8 +21,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.support.WebExchangeBindException;
 import org.springframework.web.server.ServerWebInputException;
 
-import javax.persistence.RollbackException;
-import javax.validation.ConstraintViolationException;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeoutException;

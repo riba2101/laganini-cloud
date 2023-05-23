@@ -28,10 +28,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webflux</artifactId>
+            <optional>true</optional>
         </dependency>
+
         <dependency>
-            <groupId>org.laganini.cloud.metrics</groupId>
-            <artifactId>laganini-cloud-metrics-prometheus</artifactId>
+            <groupId>org.laganini.cloud.observability</groupId>
+            <artifactId>laganini-cloud-observability</artifactId>
         </dependency>
         <dependency>
             <groupId>org.laganini.cloud.validation</groupId>

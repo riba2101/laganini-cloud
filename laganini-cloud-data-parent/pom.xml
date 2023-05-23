@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.laganini.cloud</groupId>
+        <artifactId>laganini-cloud-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../laganini-cloud-parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>org.laganini.cloud.data</groupId>
+    <artifactId>laganini-cloud-data-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>laganini-cloud-data-parent</name>
+    <description>Laganini Cloud Data Parent</description>
+
+    <modules>
+        <module>laganini-cloud-data</module>
+        <module>laganini-cloud-data-sql-test-suite</module>
+        <module>laganini-cloud-data-jpa</module>
+        <module>laganini-cloud-data-jpa-test-suite</module>
+        <module>laganini-cloud-data-r2dbc-codegen</module>
+        <module>laganini-cloud-data-r2dbc</module>
+        <module>laganini-cloud-data-r2dbc-test-suite</module>
+        <module>laganini-cloud-data-elasticsearch-test-suite</module>
+    </modules>
+
+</project>

@@ -15,23 +15,22 @@
     <packaging>pom</packaging>
 
     <properties>
-        <spring-boot.version>2.7.4</spring-boot.version>
-        <spring-cloud.version>2021.0.4</spring-cloud.version>
+        <spring-boot.version>3.0.6</spring-boot.version>
+        <spring-cloud.version>2022.0.2</spring-cloud.version>
 
-        <feign-reactor.version>3.0.3</feign-reactor.version>
-        <resilience4j.version>1.7.0</resilience4j.version>
+        <resilience4j.version>2.0.2</resilience4j.version>
 
-        <testcontainers.version>1.17.3</testcontainers.version>
+        <testcontainers.version>1.18.0</testcontainers.version>
 
         <laganini-cloud-common.version>${project.version}</laganini-cloud-common.version>
         <laganini-cloud-rmi.version>${project.version}</laganini-cloud-rmi.version>
-        <laganini-cloud-metrics.version>${project.version}</laganini-cloud-metrics.version>
-        <laganini-cloud-logging.version>${project.version}</laganini-cloud-logging.version>
+        <laganini-cloud-observability.version>${project.version}</laganini-cloud-observability.version>
         <laganini-cloud-validation.version>${project.version}</laganini-cloud-validation.version>
-        <laganini-cloud-storage-audit.version>${project.version}</laganini-cloud-storage-audit.version>
-        <laganini-cloud-storage.version>${project.version}</laganini-cloud-storage.version>
         <laganini-cloud-exception.version>${project.version}</laganini-cloud-exception.version>
         <laganini-cloud-test-suite.version>${project.version}</laganini-cloud-test-suite.version>
+        <laganini-cloud-data.version>${project.version}</laganini-cloud-data.version>
+        <laganini-cloud-data-audit.version>${project.version}</laganini-cloud-data-audit.version>
+        <laganini-cloud-micro.version>${project.version}</laganini-cloud-micro.version>
     </properties>
 
     <dependencyManagement>
@@ -59,13 +58,6 @@
                 <scope>import</scope>
             </dependency>
 
-            <dependency>
-                <groupId>com.playtika.reactivefeign</groupId>
-                <artifactId>feign-reactor-bom</artifactId>
-                <version>${feign-reactor.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
             <dependency>
                 <groupId>io.github.resilience4j</groupId>
                 <artifactId>resilience4j-bom</artifactId>
@@ -103,15 +95,9 @@
             </dependency>
 
             <dependency>
-                <groupId>org.laganini.cloud.metrics</groupId>
-                <artifactId>laganini-cloud-metrics-prometheus</artifactId>
-                <version>${laganini-cloud-metrics.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.laganini.cloud.logging</groupId>
-                <artifactId>laganini-cloud-logging</artifactId>
-                <version>${laganini-cloud-logging.version}</version>
+                <groupId>org.laganini.cloud.observability</groupId>
+                <artifactId>laganini-cloud-observability</artifactId>
+                <version>${laganini-cloud-observability.version}</version>
             </dependency>
 
             <dependency>
@@ -127,64 +113,59 @@
             </dependency>
 
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-connector</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-elasticsearch-test-suite</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-elasticsearch-test-suite</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-jpa</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-jpa</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-jpa-test-suite</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-jpa-test-suite</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-r2dbc</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-r2dbc</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-r2dbc-test-suite</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-r2dbc-test-suite</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data</groupId>
+                <artifactId>laganini-cloud-data-test-suite</artifactId>
+                <version>${laganini-cloud-data.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage</groupId>
-                <artifactId>laganini-cloud-storage-service-test-suite</artifactId>
-                <version>${laganini-cloud-storage.version}</version>
+                <groupId>org.laganini.cloud.data.audit</groupId>
+                <artifactId>laganini-cloud-data-audit-provider-elasticsearch</artifactId>
+                <version>${laganini-cloud-data-audit.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage.audit</groupId>
-                <artifactId>laganini-cloud-storage-audit-provider-elasticsearch</artifactId>
-                <version>${laganini-cloud-storage-audit.version}</version>
+                <groupId>org.laganini.cloud.data.audit</groupId>
+                <artifactId>laganini-cloud-data-audit-provider-reactive-elasticsearch</artifactId>
+                <version>${laganini-cloud-data-audit.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage.audit</groupId>
-                <artifactId>laganini-cloud-storage-audit-provider-reactive-elasticsearch</artifactId>
-                <version>${laganini-cloud-storage-audit.version}</version>
+                <groupId>org.laganini.cloud.data.audit</groupId>
+                <artifactId>laganini-cloud-data-audit-provider-jpa</artifactId>
+                <version>${laganini-cloud-data-audit.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.laganini.cloud.storage.audit</groupId>
-                <artifactId>laganini-cloud-storage-audit-provider-jpa</artifactId>
-                <version>${laganini-cloud-storage-audit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.laganini.cloud.storage.audit</groupId>
-                <artifactId>laganini-cloud-storage-audit-provider-r2dbc</artifactId>
-                <version>${laganini-cloud-storage-audit.version}</version>
+                <groupId>org.laganini.cloud.data.audit</groupId>
+                <artifactId>laganini-cloud-data-audit-provider-r2dbc</artifactId>
+                <version>${laganini-cloud-data-audit.version}</version>
             </dependency>
 
             <dependency>
@@ -194,5 +175,31 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>spring-milestone</id>
+            <name>Spring Milestone Repository</name>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>spring-release</id>
+            <name>Spring GA Repository</name>
+            <url>https://repo.spring.io/release</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestone</id>
+            <name>Spring Milestone Repository</name>
+            <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-release</id>
+            <name>Spring GA Repository</name>
+            <url>https://repo.spring.io/release</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

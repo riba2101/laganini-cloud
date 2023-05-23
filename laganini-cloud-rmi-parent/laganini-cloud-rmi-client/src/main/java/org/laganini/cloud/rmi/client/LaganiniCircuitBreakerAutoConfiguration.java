@@ -18,6 +18,7 @@ public class LaganiniCircuitBreakerAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     Customizer<ReactiveResilience4JCircuitBreakerFactory> globalCustomConfiguration() {
+        //TODO properties
         CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig
                 .custom()
                 .failureRateThreshold(50)

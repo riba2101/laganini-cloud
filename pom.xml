@@ -55,11 +55,11 @@
         <module>laganini-cloud-test-suite</module>
         <module>laganini-cloud-validation</module>
         <module>laganini-cloud-exception</module>
-        <module>laganini-cloud-logging</module>
-        <module>laganini-cloud-metrics-parent</module>
+        <module>laganini-cloud-observability</module>
         <module>laganini-cloud-rmi-parent</module>
-        <module>laganini-cloud-storage-parent</module>
-<!--        <module>laganini-cloud-storage-audit-parent</module>-->
+        <module>laganini-cloud-data-parent</module>
+<!--        <module>laganini-cloud-data-audit-parent</module>-->
+<!--        <module>laganini-cloud-micro-parent</module>-->
     </modules>
 
     <build>
@@ -76,6 +76,9 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <compilerArgument>-parameters</compilerArgument>
+                    <testCompilerArgument>-parameters</testCompilerArgument>
+                    <encoding>utf8</encoding>
                 </configuration>
             </plugin>
 

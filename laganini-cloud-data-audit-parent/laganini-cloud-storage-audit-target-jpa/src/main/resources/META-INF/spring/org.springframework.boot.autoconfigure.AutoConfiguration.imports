@@ -1,0 +1,2 @@
+org.laganini.cloud.data.audit.target.jpa.LaganiniStorageAuditJpaStorageAutoConfiguration
+org.laganini.cloud.data.audit.target.jpa.LaganiniStorageAuditJpaAutoConfiguration

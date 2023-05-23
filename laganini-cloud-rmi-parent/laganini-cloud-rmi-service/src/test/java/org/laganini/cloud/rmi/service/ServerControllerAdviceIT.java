@@ -8,19 +8,15 @@ import org.laganini.cloud.exception.BusinessExceptionResponse;
 import org.laganini.cloud.exception.ExceptionType;
 import org.laganini.cloud.exception.detail.FieldExceptionDetail;
 import org.laganini.cloud.exception.detail.code.registry.BeanValidationCode;
-import org.laganini.cloud.test.suite.IntegrationTest;
+import org.laganini.cloud.test.integration.IntegrationTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import test.app.TestBody;
 import test.app.TestConfiguration;
 import test.app.TestEndpoint;
 
-@IntegrationTest(
-        webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT,
-        classes = TestConfiguration.class
-)
+@IntegrationTest(classes = TestConfiguration.class)
 class ServerControllerAdviceIT {
 
     @LocalServerPort

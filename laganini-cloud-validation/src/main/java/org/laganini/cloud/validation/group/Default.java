@@ -1,4 +1,4 @@
 package org.laganini.cloud.validation.group;
 
-public interface Default extends javax.validation.groups.Default {
+public interface Default extends jakarta.validation.groups.Default {
 }

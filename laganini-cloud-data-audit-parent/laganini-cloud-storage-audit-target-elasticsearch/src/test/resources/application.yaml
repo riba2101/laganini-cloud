@@ -1,0 +1,12 @@
+logging.level.root: trace
+
+spring:
+  elasticsearch:
+    username: test
+
+laganini:
+  storage:
+    audit:
+      elasticsearch:
+        datasource:
+          uris: test

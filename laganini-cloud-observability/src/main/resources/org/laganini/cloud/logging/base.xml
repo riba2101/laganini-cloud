@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <jmxConfigurator/>
+
+    <springProfile name="staging,production">
+        <include resource="org/laganini/cloud/logging/defaults.xml"/>
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+<!--        <include resource="org/laganini/cloud/logging/logback-fluentd-appender.xml"/>-->
+
+        <root level="INFO">
+            <appender-ref ref="ASYNC_FLUENT"/>
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="development,test">
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+</included>

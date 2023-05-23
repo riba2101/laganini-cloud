@@ -1,29 +1,39 @@
 package test.app;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import reactivefeign.spring.config.ReactiveFeignClient;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Optional;
 
-@ReactiveFeignClient(value = Endpoint.APP, path = TestEndpoint.PATH)
+@FeignClient(value = Endpoint.APP, path = TestEndpoint.PATH)
 public interface TestEndpoint {
 
     String PATH = "test";
 
     @Validated
-    @GetMapping
+    @GetMapping("/all")
     List<TestBody> getAll();
+
+    @Validated
+    @GetMapping("/all/reactive")
+    Flux<TestBody> getAllReactive();
 
     @Validated
     @GetMapping("/{id}")
     Optional<TestBody> getById(@PathVariable @NotNull Long id);
+
+    @Validated
+    @GetMapping("/{id}/reactive")
+    Mono<TestBody> getByIdReactive(@PathVariable @NotNull Long id);
 
     @Validated
     @PostMapping
